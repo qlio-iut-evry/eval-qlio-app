@@ -687,6 +687,12 @@ function renderFilters() {
       renderFilters();
     });
   });
+
+  const levelEyebrow = state.filters.level === "but3" ? "BUT QLIO - 3e annee"
+    : state.filters.level === "but2" ? "BUT QLIO - 2e annee"
+    : "BUT QLIO";
+  document.getElementById("sidebarEyebrow").textContent = levelEyebrow;
+  document.getElementById("topbarEyebrow").textContent = levelEyebrow;
 }
 
 function renderStudentList() {
@@ -893,9 +899,6 @@ function renderSelectedStudent() {
   const student = selectedStudent();
   const hasStudent = Boolean(student);
   const score = hasStudent ? calculateScore(student) : { total60: null, total20: null };
-  const levelLabel = hasStudent && student.butLevel === "but3" ? "BUT QLIO - 3e annee" : "BUT QLIO - 2e annee";
-  document.getElementById("sidebarEyebrow").textContent = levelLabel;
-  document.getElementById("topbarEyebrow").textContent = levelLabel;
   el.selectedPath.textContent = hasStudent ? `${student.path || "Parcours inconnu"} - ${evaluationStatus(student)}` : "Aucun etudiant";
   el.selectedName.textContent = hasStudent ? `${student.lastName} ${student.firstName}` : "Importez une promotion";
   el.selectedMeta.textContent = hasStudent ? `${student.td || "-"} - ${student.tp || "-"} - ${student.company || "Entreprise non renseignee"}` : "";

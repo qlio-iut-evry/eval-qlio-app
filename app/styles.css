@@ -1027,7 +1027,7 @@ body.is-electron .view {
   display: flex;
   gap: 6px;
   padding: 8px 10px;
-  margin: 0 -12px 10px;
+  margin: 0 -12px 14px;
   background: rgba(255,255,255,.07);
   border-top: 1px solid rgba(255,255,255,.1);
   border-bottom: 1px solid rgba(255,255,255,.1);
@@ -1035,33 +1035,36 @@ body.is-electron .view {
 
 .level-selector-row .level-chip {
   flex: 1;
-  height: 30px;
+  height: 32px;
   border-radius: 6px;
-  border: 1px solid rgba(255,255,255,.2);
-  background: rgba(255,255,255,.08);
-  color: rgba(255,255,255,.65);
+  border: 2px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.5);
   font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .04em;
+  font-weight: 800;
+  letter-spacing: .06em;
   cursor: pointer;
-  transition: background .15s, color .15s;
+  transition: background .15s, color .15s, border-color .15s, box-shadow .15s;
 }
 
 .level-selector-row .level-chip.active[data-level="Tous"] {
   background: rgba(255,255,255,.22);
+  border-color: rgba(255,255,255,.4);
   color: #fff;
 }
 
 .level-selector-row .level-chip.active[data-level="but2"] {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: #1d6fd8;
+  border-color: #5a9fff;
   color: #fff;
+  box-shadow: 0 0 10px rgba(29,111,216,.6);
 }
 
 .level-selector-row .level-chip.active[data-level="but3"] {
-  background: #8b5cf6;
-  border-color: #8b5cf6;
+  background: #7c3aed;
+  border-color: #c084fc;
   color: #fff;
+  box-shadow: 0 0 10px rgba(124,58,237,.6);
 }
 
 .comments-panel .form-grid {
