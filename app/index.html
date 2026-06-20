@@ -273,13 +273,13 @@
 
   <div id="startupModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="startupTitle">
     <section class="modal-card">
-      <h2 id="startupTitle">Avant de commencer</h2>
-      <p id="startupDesc">Chargez une campagne enregistree avant de modifier les evaluations.</p>
+      <h2 id="startupTitle">Quelle campagne charger ?</h2>
+      <p id="startupDesc">Selectionnez une campagne enregistree en base ou commencez une nouvelle session.</p>
       <select id="startupDbSelect" class="campaign-select" hidden></select>
       <div class="modal-actions">
-        <button id="startupLoadDbBtn" class="primary-btn" hidden>Charger depuis la base</button>
-        <button id="startupLoadJsonBtn" class="primary-btn">Charger le dernier JSON</button>
-        <button id="startupSkipBtn" class="ghost-btn">Repartir de zero</button>
+        <button id="startupLoadDbBtn" class="primary-btn" hidden>Charger la campagne</button>
+        <button id="startupLoadJsonBtn" class="ghost-btn" hidden>Charger un JSON local</button>
+        <button id="startupSkipBtn" class="ghost-btn">Nouvelle session</button>
       </div>
     </section>
   </div>
