@@ -322,7 +322,11 @@ function scheduleAutoSaveToDb() {
     if (_saveInProgress) { scheduleAutoSaveToDb(); return; }
     _saveInProgress = true;
     setDbSyncStatus("sauvegarde...");
-    const ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
+    let ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
+    if (!ok) {
+      await new Promise(r => setTimeout(r, 2000));
+      ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
+    }
     _saveInProgress = false;
     if (ok) {
       state.backup.dirtySinceJsonSave = false;
