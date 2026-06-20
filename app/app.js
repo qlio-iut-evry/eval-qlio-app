@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   render();
   await autoLoadLastCampaign();
   _appReady = true;
+  setInterval(saveToDb, 30000);
 });
 
 function cacheElements() {
@@ -261,7 +262,7 @@ function bindEvents() {
   el.printRecapBtn.addEventListener("click", printRecap);
   el.printCommentsBtn.addEventListener("click", printComments);
   el.restoreFile.addEventListener("change", restoreJson);
-  if (el.saveDbBtn) el.saveDbBtn.addEventListener("click", saveCampaignToDb);
+  if (el.saveDbBtn) el.saveDbBtn.addEventListener("click", saveToDb);
   if (el.loadDbBtn) el.loadDbBtn.addEventListener("click", openCampaignFromDb);
   if (el.startupLoadDbBtn) el.startupLoadDbBtn.addEventListener("click", loadDbCampaignFromStartup);
   if (window.electronAPI) {
@@ -276,7 +277,9 @@ function bindEvents() {
     });
   }
   if (!window.electronAPI) {
-    window.addEventListener("beforeunload", warnBeforeClose);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") saveToDb();
+    });
   }
 }
 
@@ -306,43 +309,29 @@ function saveState(options = {}) {
   syncActiveCampaignFromWorkingState();
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   renderBackupStatus();
-  if (options.markDirty !== false) scheduleAutoSaveToDb();
 }
 
-let _autoSaveTimer = null;
 let _appReady = false;
 let _saveInProgress = false;
 
-function scheduleAutoSaveToDb() {
+async function saveToDb() {
   if (!_appReady) return;
   if (!dbIsConfigured()) return;
-  clearTimeout(_autoSaveTimer);
-  setDbSyncStatus("en attente...");
-  _autoSaveTimer = setTimeout(async () => {
-    if (_saveInProgress) { scheduleAutoSaveToDb(); return; }
-    _saveInProgress = true;
-    setDbSyncStatus("sauvegarde...");
-    let ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
-    if (!ok) {
-      const isNetworkError = (window._lastDbError || "").toLowerCase().includes("networkerror") ||
-                             (window._lastDbError || "").toLowerCase().includes("fetch");
-      const retryDelay = isNetworkError ? 30000 : 2000;
-      setDbSyncStatus(isNetworkError ? "reseau indisponible, nouvel essai dans 30s..." : "nouvel essai...");
-      await new Promise(r => setTimeout(r, retryDelay));
-      ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
-    }
-    _saveInProgress = false;
-    if (ok) {
-      state.backup.dirtySinceJsonSave = false;
-      state.backup.lastJsonSaveAt = new Date().toISOString();
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-      renderBackupStatus();
-      setDbSyncStatus("sauvegarde OK");
-      setTimeout(() => setDbSyncStatus(""), 3000);
-    } else {
-      setDbSyncStatus("erreur sauvegarde - donnees conservees localement");
-    }
-  }, state.view === "student" ? 5000 : 3000);
+  if (_saveInProgress) return;
+  _saveInProgress = true;
+  setDbSyncStatus("sauvegarde...");
+  const ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
+  _saveInProgress = false;
+  if (ok) {
+    state.backup.dirtySinceJsonSave = false;
+    state.backup.lastJsonSaveAt = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    renderBackupStatus();
+    setDbSyncStatus("sauvegarde OK");
+    setTimeout(() => setDbSyncStatus(""), 3000);
+  } else {
+    setDbSyncStatus("erreur - donnees conservees localement");
+  }
 }
 
 function setDbSyncStatus(text) {
@@ -1840,7 +1829,7 @@ async function autoLoadLastCampaign() {
 
 function initDbMode() {
   const db = typeof dbIsConfigured !== "undefined" && dbIsConfigured();
-  if (el.saveDbBtn) el.saveDbBtn.hidden = !db;
+  if (el.saveDbBtn) el.saveDbBtn.hidden = false;
   if (el.loadDbBtn) el.loadDbBtn.hidden = !db;
   if (el.startupLoadDbBtn) el.startupLoadDbBtn.hidden = !db;
   if (el.startupDbSelect) el.startupDbSelect.hidden = !db;
