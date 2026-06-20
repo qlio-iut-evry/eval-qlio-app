@@ -237,37 +237,41 @@
     </section>
 
     <section id="exportsView" class="view">
+
       <section class="panel">
         <header class="panel-head">
-          <div>
-            <h3>Sauvegarde automatique</h3>
-            <p id="jsonSaveStatus" class="muted"></p>
-          </div>
+          <h3>Sauvegarde en base</h3>
           <span id="jsonDirtyBadge" class="badge ok" hidden></span>
         </header>
-        <div class="save-guide">
-          <article>
-            <strong>Sauvegarde automatique</strong>
-            <span>Chaque modification est enregistree automatiquement en base dans les 3 secondes. Aucune action requise.</span>
-          </article>
-          <article>
-            <strong>Changer de session</strong>
-            <span>Pour reprendre le travail sur un autre poste, chargez la campagne depuis la base au demarrage.</span>
-          </article>
-          <article>
-            <strong>Export de secours</strong>
-            <span>En cas de besoin, exportez un fichier CSV ou JSON local comme sauvegarde supplementaire.</span>
-          </article>
+        <p id="jsonSaveStatus" class="muted">Chaque modification est enregistree automatiquement dans les 3 secondes.</p>
+        <div class="export-grid" style="margin-top:12px">
+          <button id="saveDbBtn" class="primary-btn" hidden>Forcer la sauvegarde maintenant</button>
+          <button id="loadDbBtn" class="ghost-btn" hidden>Charger une campagne depuis la base</button>
         </div>
-        <div class="export-grid">
-          <button id="saveDbBtn" class="primary-btn" hidden>Forcer la sauvegarde</button>
-          <button id="loadDbBtn" class="ghost-btn" hidden>Charger depuis la base</button>
-          <button id="loadJsonBtn" class="ghost-btn">Charger un JSON</button>
-          <button id="exportCsvBtn" class="ghost-btn">Exporter CSV</button>
-          <button id="saveJsonBtn" class="ghost-btn">Exporter JSON local</button>
+      </section>
+
+      <section class="panel">
+        <header class="panel-head">
+          <h3>Importer</h3>
+        </header>
+        <p class="muted">Chargez une ancienne sauvegarde JSON pour reprendre un travail precedent.</p>
+        <div class="export-grid" style="margin-top:12px">
+          <button id="loadJsonBtn" class="primary-btn">Charger un fichier JSON</button>
           <input id="restoreFile" type="file" accept=".json" hidden>
         </div>
       </section>
+
+      <section class="panel">
+        <header class="panel-head">
+          <h3>Exporter</h3>
+        </header>
+        <p class="muted">Telechargez une copie locale de vos donnees.</p>
+        <div class="export-grid" style="margin-top:12px">
+          <button id="exportCsvBtn" class="primary-btn">Exporter CSV</button>
+          <button id="saveJsonBtn" class="ghost-btn">Exporter JSON local</button>
+        </div>
+      </section>
+
     </section>
   </main>
 
