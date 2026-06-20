@@ -426,7 +426,7 @@ button:hover {
   position: relative;
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
   gap: 6px;
   padding: 10px;
   border: 0;

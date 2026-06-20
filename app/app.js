@@ -701,8 +701,6 @@ function renderStudentList() {
 
   el.studentList.innerHTML = list.map((student) => {
     const status = evaluationStatus(student);
-    const levelBadge = student.butLevel === "but3" ? "BUT3" : "BUT2";
-    const levelCls = student.butLevel === "but3" ? "level-badge-but3" : "level-badge-but2";
     return `
       <div class="student-row ${student.id === state.selectedId ? "active" : ""}">
         <button class="student-item" data-id="${student.id}">
@@ -711,7 +709,6 @@ function renderStudentList() {
             <span class="student-sub">${escapeHtml(student.td || "-")} - ${escapeHtml(student.tp || "-")} - ${escapeHtml(status)}</span>
           </span>
           <span class="path-badge path-${pathClass(student.path)}">${escapeHtml(student.path || "?")}</span>
-          <span class="level-badge ${levelCls}">${levelBadge}</span>
         </button>
         <button class="student-delete-btn" data-id="${student.id}" title="Supprimer cet etudiant">✕</button>
       </div>
