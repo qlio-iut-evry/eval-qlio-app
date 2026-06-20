@@ -1916,13 +1916,6 @@ function skipStartupJsonLoad() {
   toast("Mode sans chargement JSON : pensez a creer une sauvegarde horodatee.");
 }
 
-function warnBeforeClose(event) {
-  saveState({ markDirty: false });
-  if (!state.backup?.dirtySinceJsonSave) return;
-  event.preventDefault();
-  event.returnValue = "Des modifications ne sont pas encore enregistrees dans un fichier JSON. Enregistrez une sauvegarde horodatee avant de fermer.";
-  return event.returnValue;
-}
 
 function formatDateTime(value) {
   if (!value) return "";
