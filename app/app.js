@@ -112,14 +112,14 @@ const el = {};
 const recapFilters = { path: "Tous", student: "" };
 const recapSelection = new Set();
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   document.body.classList.toggle("is-electron", Boolean(window.electronAPI));
   cacheElements();
   bindEvents();
   loadState();
   initDbMode();
   render();
-  showStartupWarning();
+  await autoLoadLastCampaign();
 });
 
 function cacheElements() {
@@ -1802,6 +1802,25 @@ function timestampSlug() {
   const now = new Date();
   const pad = (value) => String(value).padStart(2, "0");
   return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}_${pad(now.getHours())}h${pad(now.getMinutes())}`;
+}
+
+async function autoLoadLastCampaign() {
+  let db = false;
+  try { db = typeof dbIsConfigured !== "undefined" && dbIsConfigured(); } catch (e) {}
+  if (!db) return;
+  try {
+    const campaigns = await dbListCampaigns();
+    if (!campaigns.length) return;
+    const last = campaigns[0];
+    const alreadyLoaded = state.backup?.lastJsonLoadName === `base:${last.name}`;
+    if (alreadyLoaded) { toast("Campagne chargee depuis la sauvegarde locale"); return; }
+    const data = await dbLoadCampaign(last.id);
+    if (!data) return;
+    applyRestoredState(data, `base:${last.name}`);
+    toast(`Campagne "${last.name}" chargee depuis la base`);
+  } catch (e) {
+    console.error("autoLoadLastCampaign:", e);
+  }
 }
 
 function initDbMode() {
