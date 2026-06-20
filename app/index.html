@@ -247,37 +247,33 @@
       <section class="panel">
         <header class="panel-head">
           <div>
-            <h3>Sauvegarde JSON SharePoint</h3>
-            <p id="jsonSaveStatus" class="muted">Aucun fichier JSON de travail charge pour cette session.</p>
+            <h3>Sauvegarde automatique</h3>
+            <p id="jsonSaveStatus" class="muted"></p>
           </div>
-          <span id="jsonDirtyBadge" class="badge warn">A enregistrer</span>
+          <span id="jsonDirtyBadge" class="badge ok" hidden></span>
         </header>
-        <div class="save-warning">
-          En fin de saisie, exportez une nouvelle sauvegarde JSON horodatee et choisissez son emplacement. Ne remplacez pas les anciens fichiers : ils servent d'historique si une information doit etre retrouvee.
-        </div>
         <div class="save-guide">
           <article>
-            <strong>1. Debut de session</strong>
-            <span>Chargez le dernier fichier JSON disponible sur SharePoint avant de modifier les evaluations.</span>
+            <strong>Sauvegarde automatique</strong>
+            <span>Chaque modification est enregistree automatiquement en base dans les 3 secondes. Aucune action requise.</span>
           </article>
           <article>
-            <strong>2. Pendant la saisie</strong>
-            <span>L'application garde une copie locale automatique, mais elle ne remplace pas la sauvegarde JSON partagee.</span>
+            <strong>Changer de session</strong>
+            <span>Pour reprendre le travail sur un autre poste, chargez la campagne depuis la base au demarrage.</span>
           </article>
           <article>
-            <strong>3. Fin de session</strong>
-            <span>Exportez un JSON horodate, choisissez le dossier SharePoint, puis conservez les anciennes sauvegardes.</span>
+            <strong>Export de secours</strong>
+            <span>En cas de besoin, exportez un fichier CSV ou JSON local comme sauvegarde supplementaire.</span>
           </article>
         </div>
         <div class="export-grid">
-          <button id="saveDbBtn" class="primary-btn" hidden>Sauvegarder en base</button>
+          <button id="saveDbBtn" class="primary-btn" hidden>Forcer la sauvegarde</button>
           <button id="loadDbBtn" class="ghost-btn" hidden>Charger depuis la base</button>
-          <button id="saveJsonBtn" class="ghost-btn">Exporter JSON local</button>
-          <button id="loadJsonBtn" class="ghost-btn">Charger un JSON</button>
           <button id="exportCsvBtn" class="ghost-btn">Exporter CSV</button>
+          <button id="saveJsonBtn" class="ghost-btn">Exporter JSON local</button>
+          <button id="loadJsonBtn" class="ghost-btn" hidden>Charger un JSON</button>
           <input id="restoreFile" type="file" accept=".json" hidden>
         </div>
-        <p class="muted">Si deux personnes travaillent en meme temps a partir du meme JSON, les modifications ne sont pas fusionnees automatiquement. Repartissez-vous les saisies et gardez toutes les sauvegardes.</p>
       </section>
     </section>
   </main>
