@@ -254,7 +254,7 @@ function bindEvents() {
   el.exportCsvBtn.addEventListener("click", exportCsv);
   el.loadJsonBtn.addEventListener("click", openWorkingJsonFile);
   el.saveJsonBtn.addEventListener("click", saveWorkingJsonFile);
-  el.quickLoadJsonBtn.addEventListener("click", openWorkingJsonFile);
+  if (el.quickLoadJsonBtn) el.quickLoadJsonBtn.addEventListener("click", openWorkingJsonFile);
   el.startupLoadJsonBtn.addEventListener("click", openWorkingJsonFile);
   el.startupSkipBtn.addEventListener("click", skipStartupJsonLoad);
   el.printRecapBtn.addEventListener("click", printRecap);
