@@ -167,7 +167,7 @@ const HEADERS = {
   path: ["parcours", "groupe"],
   cm: ["cm"],
   td: ["td"],
-  tp: ["tp", "tp fi", "tp fi - fia"],
+  tp: ["tp", "tp fi", "tp fi - fia", "tp s6", "groupe tp", "grp tp", "tp osc", "tp qmi"],
   state: ["etat"],
   schoolMail: ["mail"],
   personalMail: ["personnel", "mail personnel"]
@@ -1565,6 +1565,7 @@ function rowToStudent(row) {
   Object.entries(row).forEach(([key, value]) => {
     normalized[normalizeHeader(key)] = value;
   });
+  if (!window._headerLogged) { console.log("[import] colonnes detectees:", Object.keys(normalized)); window._headerLogged = true; }
   const pick = (field) => {
     const aliases = HEADERS[field];
     const key = aliases.find((alias) => normalized[normalizeHeader(alias)] !== undefined);
