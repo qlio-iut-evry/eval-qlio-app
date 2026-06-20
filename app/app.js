@@ -817,15 +817,15 @@ function renderRubrics() {
             </div>
           </div>
         `).join("")}
-        <div class="rubric-comment-head">
-          <label class="rubric-comment-label">Commentaire libre ${escapeHtml(rubric.title)}</label>
-          <button type="button" class="preset-manage-btn" data-rubric="${escapeAttr(rubric.id)}" title="Gérer les commentaires types">⚙</button>
-        </div>
-        <textarea data-rubric-comment="${escapeAttr(rubric.id)}" rows="3" placeholder="Remarque specifique a ce livrable..."></textarea>
+        <label class="rubric-comment">
+          Commentaire libre ${escapeHtml(rubric.title)}
+          <textarea data-rubric-comment="${escapeAttr(rubric.id)}" rows="3" placeholder="Remarque specifique a ce livrable..."></textarea>
+        </label>
         <div class="comment-presets" aria-label="Commentaires types ${escapeAttr(rubric.title)}">
           ${(presets[rubric.id] || []).map((preset) => `
             <button type="button" data-comment-preset="${escapeAttr(preset)}" title="${escapeAttr(preset)}" aria-label="${escapeAttr(preset)}">${escapeHtml(shortPresetLabel(preset))}</button>
           `).join("")}
+          <button type="button" class="preset-manage-btn" data-rubric="${escapeAttr(rubric.id)}">+ Gérer</button>
         </div>
       </div>
     </article>
