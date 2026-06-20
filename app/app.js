@@ -338,7 +338,7 @@ function scheduleAutoSaveToDb() {
     } else {
       setDbSyncStatus("erreur sauvegarde");
     }
-  }, 3000);
+  }, state.view === "student" ? 5000 : 3000);
 }
 
 function setDbSyncStatus(text) {
