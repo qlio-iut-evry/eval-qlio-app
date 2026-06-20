@@ -311,18 +311,24 @@ function saveState(options = {}) {
 
 let _autoSaveTimer = null;
 let _appReady = false;
+let _saveInProgress = false;
+
 function scheduleAutoSaveToDb() {
   if (!_appReady) return;
   if (!dbIsConfigured()) return;
   clearTimeout(_autoSaveTimer);
   setDbSyncStatus("en attente...");
   _autoSaveTimer = setTimeout(async () => {
+    if (_saveInProgress) { scheduleAutoSaveToDb(); return; }
+    _saveInProgress = true;
     setDbSyncStatus("sauvegarde...");
     const ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
+    _saveInProgress = false;
     if (ok) {
       state.backup.dirtySinceJsonSave = false;
       state.backup.lastJsonSaveAt = new Date().toISOString();
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      renderBackupStatus();
       setDbSyncStatus("sauvegarde OK");
       setTimeout(() => setDbSyncStatus(""), 3000);
     } else {

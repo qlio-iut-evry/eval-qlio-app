@@ -80,25 +80,23 @@ async function dbSaveCampaign(id, name, stateData) {
 
     // 1. Écrire le fichier de la campagne
     const existing = await ghRead(`${DATA_DIR}/${id}.json`);
-    await ghWrite(
-      `${DATA_DIR}/${id}.json`,
-      stateData,
-      existing?.sha,
-      `save campaign ${name}`
-    );
+    await ghWrite(`${DATA_DIR}/${id}.json`, stateData, existing?.sha, `save campaign ${name}`);
 
-    // 2. Mettre à jour l'index
-    const indexFile = await ghRead(`${DATA_DIR}/index.json`);
-    const index = indexFile ? indexFile.content : [];
-    const entry = index.find((c) => c.id === id);
-    if (entry) {
-      entry.name = name;
-      entry.updated_at = now;
-    } else {
-      index.unshift({ id, name, updated_at: now });
+    // 2. Mettre à jour l'index (retry jusqu'à 3 fois en cas de conflit SHA)
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const indexFile = await ghRead(`${DATA_DIR}/index.json`);
+      const index = indexFile ? indexFile.content : [];
+      const entry = index.find((c) => c.id === id);
+      if (entry) { entry.name = name; entry.updated_at = now; }
+      else { index.unshift({ id, name, updated_at: now }); }
+      index.sort((a, b) => b.updated_at.localeCompare(a.updated_at));
+      try {
+        await ghWrite(`${DATA_DIR}/index.json`, index, indexFile?.sha, `index: update ${name}`);
+        break;
+      } catch (e) {
+        if (attempt === 2) throw e;
+      }
     }
-    index.sort((a, b) => b.updated_at.localeCompare(a.updated_at));
-    await ghWrite(`${DATA_DIR}/index.json`, index, indexFile?.sha, `index: update ${name}`);
 
     return true;
   } catch (e) {
