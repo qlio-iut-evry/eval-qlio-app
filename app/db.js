@@ -93,9 +93,16 @@ async function dbSaveCampaign(id, name, stateData) {
   try {
     const now = new Date().toISOString();
 
-    // 1. Écrire le fichier de la campagne
-    const existing = await ghRead(`${DATA_DIR}/${id}.json`);
-    await ghWrite(`${DATA_DIR}/${id}.json`, stateData, existing?.sha, `save campaign ${name}`);
+    // 1. Écrire le fichier de la campagne (retry sur conflit SHA)
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const existing = await ghRead(`${DATA_DIR}/${id}.json`);
+      try {
+        await ghWrite(`${DATA_DIR}/${id}.json`, stateData, existing?.sha, `save campaign ${name}`);
+        break;
+      } catch (e) {
+        if (attempt === 2) throw e;
+      }
+    }
 
     // 2. Mettre à jour l'index (retry jusqu'à 3 fois en cas de conflit SHA)
     for (let attempt = 0; attempt < 3; attempt++) {
