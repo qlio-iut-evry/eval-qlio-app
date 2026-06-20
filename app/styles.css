@@ -409,24 +409,121 @@ button:hover {
   padding: 6px 8px 14px;
 }
 
-.student-item {
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px;
-  padding: 10px;
-  border: 0;
+.student-row {
+  display: flex;
+  align-items: stretch;
   border-bottom: 1px solid rgba(255, 255, 255, .07);
   border-radius: 8px;
+}
+
+.student-row.active .student-item,
+.student-row:hover .student-item {
+  background: rgba(255, 255, 255, .12);
+}
+
+.student-row:hover .student-delete-btn {
+  opacity: 1;
+}
+
+.student-item {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 6px;
+  padding: 10px;
+  border: 0;
+  border-radius: 8px 0 0 8px;
   background: transparent;
   color: #fff;
   text-align: left;
 }
 
-.student-item:hover,
-.student-item.active {
-  background: rgba(255, 255, 255, .12);
+.student-delete-btn {
+  opacity: 0;
+  flex-shrink: 0;
+  width: 28px;
+  border: 0;
+  border-radius: 0 8px 8px 0;
+  background: transparent;
+  color: rgba(255,255,255,.4);
+  font-size: 11px;
+  cursor: pointer;
+  transition: opacity .15s, background .15s, color .15s;
+}
+
+.student-delete-btn:hover {
+  background: rgba(220,38,38,.25);
+  color: #fca5a5;
+}
+
+.level-badge {
+  align-self: center;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .05em;
+}
+
+.level-badge-but2 {
+  background: rgba(29,111,216,.35);
+  color: #93c5fd;
+}
+
+.level-badge-but3 {
+  background: rgba(124,58,237,.35);
+  color: #c4b5fd;
+}
+
+/* Dialog choix niveau à l'import */
+.import-level-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.import-level-dialog {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 12px;
+  padding: 28px 32px;
+  min-width: 320px;
+  text-align: center;
+}
+
+.import-level-title {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.import-level-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.import-level-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.import-level-buttons .primary-btn {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  padding: 12px;
+}
+
+.import-but3-btn {
+  background: #7c3aed !important;
 }
 
 .student-name {

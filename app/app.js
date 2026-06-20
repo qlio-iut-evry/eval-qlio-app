@@ -701,14 +701,20 @@ function renderStudentList() {
 
   el.studentList.innerHTML = list.map((student) => {
     const status = evaluationStatus(student);
+    const levelBadge = student.butLevel === "but3" ? "BUT3" : "BUT2";
+    const levelCls = student.butLevel === "but3" ? "level-badge-but3" : "level-badge-but2";
     return `
-      <button class="student-item ${student.id === state.selectedId ? "active" : ""}" data-id="${student.id}">
-        <span>
-          <span class="student-name">${escapeHtml(student.lastName)} ${escapeHtml(student.firstName)}</span>
-          <span class="student-sub">${escapeHtml(student.td || "-")} - ${escapeHtml(student.tp || "-")} - ${escapeHtml(status)}</span>
-        </span>
-        <span class="path-badge path-${pathClass(student.path)}">${escapeHtml(student.path || "?")}</span>
-      </button>
+      <div class="student-row ${student.id === state.selectedId ? "active" : ""}">
+        <button class="student-item" data-id="${student.id}">
+          <span>
+            <span class="student-name">${escapeHtml(student.lastName)} ${escapeHtml(student.firstName)}</span>
+            <span class="student-sub">${escapeHtml(student.td || "-")} - ${escapeHtml(student.tp || "-")} - ${escapeHtml(status)}</span>
+          </span>
+          <span class="path-badge path-${pathClass(student.path)}">${escapeHtml(student.path || "?")}</span>
+          <span class="level-badge ${levelCls}">${levelBadge}</span>
+        </button>
+        <button class="student-delete-btn" data-id="${student.id}" title="Supprimer cet etudiant">✕</button>
+      </div>
     `;
   }).join("") || `<p class="status-line">Aucun etudiant pour ce filtre.</p>`;
 
@@ -723,6 +729,19 @@ function renderStudentList() {
       renderStudentList();
       renderSelectedStudent();
       renderDashboard();
+    });
+  });
+
+  el.studentList.querySelectorAll(".student-delete-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const student = state.students.find((s) => s.id === btn.dataset.id);
+      if (!student) return;
+      if (!confirm(`Supprimer ${student.lastName} ${student.firstName} ?`)) return;
+      state.students = state.students.filter((s) => s.id !== btn.dataset.id);
+      if (state.selectedId === btn.dataset.id) state.selectedId = state.students[0]?.id || null;
+      saveState();
+      render();
     });
   });
 }
@@ -1438,12 +1457,38 @@ function evaluationStatus(student) {
   return "En cours";
 }
 
+function askImportLevel() {
+  return new Promise((resolve) => {
+    const overlay = document.createElement("div");
+    overlay.className = "import-level-overlay";
+    overlay.innerHTML = `
+      <div class="import-level-dialog">
+        <p class="import-level-title">Niveau des etudiants a importer</p>
+        <p class="import-level-sub">Vous pourrez modifier le niveau individuellement dans la fiche de chaque etudiant.</p>
+        <div class="import-level-buttons">
+          <button class="primary-btn" data-level="but2">BUT 2</button>
+          <button class="primary-btn import-but3-btn" data-level="but3">BUT 3</button>
+        </div>
+      </div>
+    `;
+    overlay.querySelectorAll("button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.body.removeChild(overlay);
+        resolve(btn.dataset.level);
+      });
+    });
+    document.body.appendChild(overlay);
+  });
+}
+
 async function importStudentFile(file) {
   el.importStatus.textContent = "Lecture du fichier...";
   try {
     const rows = await readSpreadsheet(file);
     const students = rows.map(rowToStudent).filter((student) => student.lastName || student.firstName);
     if (!students.length) throw new Error("Aucun etudiant reconnu");
+    const level = await askImportLevel();
+    students.forEach((s) => { s.butLevel = level; });
     mergeStudents(students);
     state.selectedId = state.students[0]?.id || null;
     saveState();
