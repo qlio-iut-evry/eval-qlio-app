@@ -1143,8 +1143,16 @@ function renderCompletion(student) {
   el.completionBadge.classList.toggle("warn", status !== "Valide");
 }
 
+function dashboardStudents() {
+  return state.students.filter((s) => {
+    const matchesLevel = state.filters.level === "Tous" || (s.butLevel || "but2") === state.filters.level;
+    const matchesPath = state.filters.path === "Tous" || s.path === state.filters.path;
+    return matchesLevel && matchesPath;
+  });
+}
+
 function renderDashboard() {
-  const students = state.students;
+  const students = dashboardStudents();
   const done = students.filter((student) => evaluationStatus(student) === "Valide").length;
   const scored = students.map(calculateScore).filter((score) => score.total20 !== null);
   const average = scored.length ? scored.reduce((sum, score) => sum + score.total20, 0) / scored.length : null;
@@ -1795,6 +1803,7 @@ function filteredRecapStudents() {
   return state.students.filter((s) => {
     if (!(s.lastName || s.firstName)) return false;
     if (recapFilters.path !== "Tous" && s.path !== recapFilters.path) return false;
+    if (state.filters.level !== "Tous" && (s.butLevel || "but2") !== state.filters.level) return false;
     if (search) {
       const haystack = normalizeHeader(`${s.lastName} ${s.firstName}`);
       if (!haystack.includes(search)) return false;

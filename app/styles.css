@@ -296,8 +296,27 @@ button {
 .export-grid,
 .top-actions {
   display: flex;
-  gap: 6px;
+  gap: 10px;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.tab-group {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tab-group .tab-btn {
+  border: none;
+  border-radius: 0;
+  border-right: 1px solid var(--border);
+}
+
+.tab-group .tab-btn:last-child {
+  border-right: none;
 }
 
 .campaign-actions {

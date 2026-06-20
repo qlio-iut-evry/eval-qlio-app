@@ -74,10 +74,14 @@
       </div>
       <div class="top-actions">
         <span id="dbSyncStatus" class="db-sync-status"></span>
-        <button class="tab-btn active" data-view="dashboard">Tableau</button>
-        <button class="tab-btn" data-view="evaluation">Evaluation</button>
-        <button class="tab-btn" data-view="student">Fiche</button>
-        <button class="tab-btn" data-view="recap">Recap</button>
+        <div class="tab-group">
+          <button class="tab-btn active" data-view="evaluation">Evaluation</button>
+          <button class="tab-btn" data-view="student">Fiche</button>
+        </div>
+        <div class="tab-group">
+          <button class="tab-btn" data-view="dashboard">Tableau</button>
+          <button class="tab-btn" data-view="recap">Recap</button>
+        </div>
         <button class="tab-btn" data-view="exports">Sauvegarde</button>
       </div>
     </header>
