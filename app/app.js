@@ -256,8 +256,8 @@ function bindEvents() {
   el.loadJsonBtn.addEventListener("click", openWorkingJsonFile);
   el.saveJsonBtn.addEventListener("click", saveWorkingJsonFile);
   if (el.quickLoadJsonBtn) el.quickLoadJsonBtn.addEventListener("click", openWorkingJsonFile);
-  el.startupLoadJsonBtn.addEventListener("click", openWorkingJsonFile);
-  el.startupSkipBtn.addEventListener("click", skipStartupJsonLoad);
+  if (el.startupLoadJsonBtn) el.startupLoadJsonBtn.addEventListener("click", openWorkingJsonFile);
+  if (el.startupSkipBtn) el.startupSkipBtn.addEventListener("click", skipStartupJsonLoad);
   el.printRecapBtn.addEventListener("click", printRecap);
   el.printCommentsBtn.addEventListener("click", printComments);
   el.restoreFile.addEventListener("change", restoreJson);
