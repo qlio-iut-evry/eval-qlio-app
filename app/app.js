@@ -336,7 +336,7 @@ function scheduleAutoSaveToDb() {
       setDbSyncStatus("sauvegarde OK");
       setTimeout(() => setDbSyncStatus(""), 3000);
     } else {
-      setDbSyncStatus("erreur sauvegarde");
+      setDbSyncStatus("erreur: " + (window._lastDbError || "inconnue"));
     }
   }, state.view === "student" ? 5000 : 3000);
 }

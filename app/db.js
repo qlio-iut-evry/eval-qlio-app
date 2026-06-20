@@ -76,6 +76,7 @@ async function dbLoadCampaign(id) {
 }
 
 async function dbSaveCampaign(id, name, stateData) {
+  window._lastDbError = null;
   try {
     const now = new Date().toISOString();
 
@@ -102,6 +103,7 @@ async function dbSaveCampaign(id, name, stateData) {
     return true;
   } catch (e) {
     console.error("dbSaveCampaign:", e);
+    window._lastDbError = e.message;
     return false;
   }
 }
