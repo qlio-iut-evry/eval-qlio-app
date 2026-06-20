@@ -1682,6 +1682,7 @@ function restoreJsonContent(content, filename, options = {}) {
 
 function applyRestoredState(restored, filename, options = {}) {
   Object.assign(state, restored);
+  state.view = "dashboard";
   normalizeBackupState();
   state.backup.lastJsonLoadName = filename || state.backup.lastJsonLoadName || "";
   state.backup.lastJsonSaveAt = options.keepSavedAt ? state.backup.lastJsonSaveAt : "";
