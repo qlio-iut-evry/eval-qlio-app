@@ -305,6 +305,32 @@ function saveState(options = {}) {
   syncActiveCampaignFromWorkingState();
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   renderBackupStatus();
+  if (options.markDirty !== false) scheduleAutoSaveToDb();
+}
+
+let _autoSaveTimer = null;
+function scheduleAutoSaveToDb() {
+  if (!dbIsConfigured()) return;
+  clearTimeout(_autoSaveTimer);
+  setDbSyncStatus("en attente...");
+  _autoSaveTimer = setTimeout(async () => {
+    setDbSyncStatus("sauvegarde...");
+    const ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
+    if (ok) {
+      state.backup.dirtySinceJsonSave = false;
+      state.backup.lastJsonSaveAt = new Date().toISOString();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      setDbSyncStatus("sauvegarde OK");
+      setTimeout(() => setDbSyncStatus(""), 3000);
+    } else {
+      setDbSyncStatus("erreur sauvegarde");
+    }
+  }, 3000);
+}
+
+function setDbSyncStatus(text) {
+  const el2 = document.getElementById("dbSyncStatus");
+  if (el2) el2.textContent = text;
 }
 
 function migrateCampaigns() {

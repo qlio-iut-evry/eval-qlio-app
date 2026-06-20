@@ -1439,6 +1439,14 @@ label textarea {
   color: var(--ok);
 }
 
+.db-sync-status {
+  font-size: 11px;
+  color: var(--text-muted, #888);
+  opacity: 0.8;
+  min-width: 100px;
+  text-align: right;
+}
+
 .toast {
   position: fixed;
   right: 18px;
