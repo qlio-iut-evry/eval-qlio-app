@@ -676,9 +676,9 @@ function renderFilters() {
   });
 
   const levels = ["Tous", "but2", "but3"];
-  const levelLabels = { "Tous": "Tous", "but2": "BUT2", "but3": "BUT3" };
+  const levelLabels = { "Tous": "Tous", "but2": "BUT 2", "but3": "BUT 3" };
   el.levelFilters.innerHTML = levels.map((level) => (
-    `<button class="chip ${state.filters.level === level ? "active" : ""}" data-level="${escapeAttr(level)}">${escapeHtml(levelLabels[level])}</button>`
+    `<button class="level-chip ${state.filters.level === level ? "active" : ""}" data-level="${escapeAttr(level)}">${escapeHtml(levelLabels[level])}</button>`
   )).join("");
   el.levelFilters.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -893,6 +893,9 @@ function renderSelectedStudent() {
   const student = selectedStudent();
   const hasStudent = Boolean(student);
   const score = hasStudent ? calculateScore(student) : { total60: null, total20: null };
+  const levelLabel = hasStudent && student.butLevel === "but3" ? "BUT QLIO - 3e annee" : "BUT QLIO - 2e annee";
+  document.getElementById("sidebarEyebrow").textContent = levelLabel;
+  document.getElementById("topbarEyebrow").textContent = levelLabel;
   el.selectedPath.textContent = hasStudent ? `${student.path || "Parcours inconnu"} - ${evaluationStatus(student)}` : "Aucun etudiant";
   el.selectedName.textContent = hasStudent ? `${student.lastName} ${student.firstName}` : "Importez une promotion";
   el.selectedMeta.textContent = hasStudent ? `${student.td || "-"} - ${student.tp || "-"} - ${student.company || "Entreprise non renseignee"}` : "";
