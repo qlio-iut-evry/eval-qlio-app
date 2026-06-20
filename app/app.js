@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initDbMode();
   render();
   await autoLoadLastCampaign();
+  _appReady = true;
 });
 
 function cacheElements() {
@@ -309,7 +310,9 @@ function saveState(options = {}) {
 }
 
 let _autoSaveTimer = null;
+let _appReady = false;
 function scheduleAutoSaveToDb() {
+  if (!_appReady) return;
   if (!dbIsConfigured()) return;
   clearTimeout(_autoSaveTimer);
   setDbSyncStatus("en attente...");
