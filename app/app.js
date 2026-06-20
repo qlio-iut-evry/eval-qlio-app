@@ -688,11 +688,6 @@ function renderFilters() {
     });
   });
 
-  const levelEyebrow = state.filters.level === "but3" ? "BUT QLIO - 3e annee"
-    : state.filters.level === "but2" ? "BUT QLIO - 2e annee"
-    : "BUT QLIO";
-  document.getElementById("sidebarEyebrow").textContent = levelEyebrow;
-  document.getElementById("topbarEyebrow").textContent = levelEyebrow;
 }
 
 function renderStudentList() {
