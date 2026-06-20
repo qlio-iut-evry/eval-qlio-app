@@ -34,14 +34,27 @@ async function ghRead(path) {
   const json = await res.json();
   return {
     sha: json.sha,
-    content: JSON.parse(atob(json.content.replace(/\n/g, "")))
+    content: JSON.parse(fromBase64(json.content))
   };
+}
+
+function toBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = "";
+  bytes.forEach(b => binary += String.fromCharCode(b));
+  return btoa(binary);
+}
+
+function fromBase64(b64) {
+  const binary = atob(b64.replace(/\n/g, ""));
+  const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
 }
 
 async function ghWrite(path, content, sha, message) {
   const body = {
     message: message || `update ${path}`,
-    content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2)))),
+    content: toBase64(JSON.stringify(content, null, 2)),
     branch: GITHUB_BRANCH
   };
   if (sha) body.sha = sha;
