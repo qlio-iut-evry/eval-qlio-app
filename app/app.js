@@ -836,7 +836,8 @@ function renderRubrics() {
       const student = selectedStudent();
       if (!student) return;
       const rubricId = button.closest(".rubric").dataset.rubric;
-      student.evaluation.rubrics[rubricId].firstVersion = button.dataset.value;
+      const rubricData = student.evaluation.rubrics[rubricId];
+      rubricData.firstVersion = rubricData.firstVersion === button.dataset.value ? "" : button.dataset.value;
       student.evaluation.validated = false;
       autosaveRenderStudent();
     });
