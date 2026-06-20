@@ -480,50 +480,74 @@ button:hover {
 .import-level-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.75);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  backdrop-filter: blur(4px);
 }
 
 .import-level-dialog {
   background: var(--bg-panel);
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 12px;
-  padding: 28px 32px;
-  min-width: 320px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: 32px 36px 28px;
+  width: 340px;
   text-align: center;
+  box-shadow: 0 24px 60px rgba(0,0,0,.5);
 }
 
 .import-level-title {
-  font-size: 15px;
-  font-weight: 800;
-  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
 }
 
 .import-level-sub {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-bottom: 24px;
+  display: none;
 }
 
 .import-level-buttons {
   display: flex;
-  gap: 12px;
-  justify-content: center;
+  gap: 10px;
 }
 
 .import-level-buttons .primary-btn {
   flex: 1;
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: .06em;
-  padding: 12px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.15);
+  padding: 0;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+
+.import-level-buttons .primary-btn:hover {
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.3);
+}
+
+.import-level-buttons .primary-btn[data-level="but2"]:hover {
+  background: #1d6fd8;
+  border-color: #5a9fff;
 }
 
 .import-but3-btn {
+  background: rgba(255,255,255,.1) !important;
+}
+
+.import-but3-btn:hover {
   background: #7c3aed !important;
+  border-color: #c084fc !important;
 }
 
 .student-name {
