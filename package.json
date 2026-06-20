@@ -1,0 +1,35 @@
+{
+  "name": "evaluation-1-3-stage-qlio",
+  "version": "1.0.0",
+  "description": "Application d'evaluation 1/3 stage BUT QLIO",
+  "main": "electron/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "fr.iut.qlio.evaluation13stage",
+    "productName": "Evaluation 1-3 Stage QLIO",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "app/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "portable": {
+      "artifactName": "Evaluation-1-3-Stage-QLIO.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  }
+}

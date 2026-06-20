@@ -1,0 +1,4623 @@
+{
+  "campaigns": [
+    {
+      "id": "campaign_default",
+      "name": "2025-2026",
+      "students": [
+        {
+          "id": "7af3071c-8ab4-4ef4-909f-ffb91e841f5e",
+          "civility": "",
+          "lastName": "BARRET",
+          "firstName": "Nicolas",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP QMI FIA",
+          "state": "I",
+          "schoolMail": "20246909@etud.univ-evry.fr",
+          "personalMail": "barretnicolas77@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "548476ee-e22a-45da-b316-5ce76f454722",
+          "civility": "",
+          "lastName": "BAUDRY",
+          "firstName": "Maxime",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FIA",
+          "state": "I",
+          "schoolMail": "20245994@etud.univ-evry.fr",
+          "personalMail": "baudry.max91@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "Denis Gerelli",
+          "evaluation": {
+            "bonus": 0,
+            "comment": "La fiche de cadrage est un peu légère, il faut bien insister sur les enjeux et le contexte et bien mettre en avant les indicateurs et objectifs finaux. Le planning aussi est à améliorer pour qu'il rende bien compte du projet, soyez plus ambitieux sur votre périmètre d'action et pensez bien a instaurer une démarche de projet et d'analyse complète.",
+            "validated": true,
+            "validatedAt": "2026-05-14T15:17:12.812Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 6,
+                  "realism": 7,
+                  "dayInputs": 5,
+                  "presentation": 5
+                },
+                "comment": "Le lien entre les actions prevues et la demarche d'amelioration reste a clarifier.\nLes risques, points de blocage ou dependances ne sont pas assez anticipes."
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 7,
+                  "clarity": 7,
+                  "dayInputs": 7,
+                  "presentation": 5
+                },
+                "comment": "Les flux ne sont pas quantifies : volumes, frequences ou delais doivent etre precises pour mesurer leur importance."
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 6,
+                  "existing": 6,
+                  "dayInputs": 5,
+                  "presentation": 5
+                },
+                "comment": "Le probleme traite n'est pas encore formule de facon assez precise.\nLes objectifs du projet doivent etre rendus plus concrets et mesurables."
+              }
+            }
+          }
+        },
+        {
+          "id": "a0becdde-3bc2-48b1-ad3f-c160c3100a39",
+          "civility": "",
+          "lastName": "BELLANGER",
+          "firstName": "Julie",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20244490@etud.univ-evry.fr",
+          "personalMail": "julie.juju.bellanger@free.fr",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "54aafe38-a578-4224-93dd-0bf4a9f2c8e4",
+          "civility": "",
+          "lastName": "BEN AMAR",
+          "firstName": "Amira",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FI",
+          "state": "I",
+          "schoolMail": "20255749@etud.univ-evry.fr",
+          "personalMail": "amirabenamar07@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "Quand vous aurez démarré votre stage , il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "bad53a3c-a435-41ef-bb9f-5d1db07579ca",
+          "civility": "",
+          "lastName": "BETREMA--BOCENO",
+          "firstName": "Enzo",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20235952@etud.univ-evry.fr",
+          "personalMail": "enzo.betrema@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "b8cecbf3-1a3d-42a7-8bea-3a1dfbe8f785",
+          "civility": "",
+          "lastName": "BILGIN",
+          "firstName": "Aylin",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20240276@etud.univ-evry.fr",
+          "personalMail": "bilgin.aylin7700@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "14a8b290-b10e-480c-9c04-b4fdf64bf1b4",
+          "civility": "",
+          "lastName": "CAMBON--CHESNAIS",
+          "firstName": "Alexi",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FIA",
+          "state": "I",
+          "schoolMail": "20245872@etud.univ-evry.fr",
+          "personalMail": "alexi.cambon@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "Denis Gerelli",
+          "evaluation": {
+            "bonus": "",
+            "comment": "L'ensemble est correct mais vous devez encore retraillé votre diagramme de flux qui visuellement n'est pas satisfaisant, notamment le planning macro.",
+            "validated": true,
+            "validatedAt": "2026-05-14T15:14:56.850Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 7,
+                  "realism": 6,
+                  "dayInputs": 6,
+                  "presentation": 7
+                },
+                "comment": "Planning trop général : les étapes manquent de précision et ne permettent pas de suivre clairement l'avancement.\nLes risques, points de blocage ou dépendances ne sont pas assez anticipés."
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 5,
+                  "clarity": 5,
+                  "dayInputs": 7,
+                  "presentation": 6
+                },
+                "comment": "Le schéma des flux ne fait pas apparaître assez clairement les acteurs impliqués.\nLes flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance.\nLe schéma ne permet pas encore de repérer clairement les dysfonctionnements ou points d'amélioration.\nLe diagramme macro manque de lisibilité."
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 7,
+                  "existing": 6,
+                  "dayInputs": 6,
+                  "presentation": 7
+                },
+                "comment": "Le problème traité n'est pas encore formulé de façon assez précise.\nLe périmètre de l'étude reste trop flou.\nL'analyse de l'existant manque de faits, données ou observations terrain."
+              }
+            }
+          }
+        },
+        {
+          "id": "52863615-141f-4fbd-b8f7-ffeefc1e14c8",
+          "civility": "",
+          "lastName": "CHEBAUX",
+          "firstName": "Xavier",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP QMI FIA",
+          "state": "I",
+          "schoolMail": "20245877@etud.univ-evry.fr",
+          "personalMail": "chebauxxavier@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "d46517d5-ff77-4a53-802b-f38f9588ae70",
+          "civility": "",
+          "lastName": "DELEN",
+          "firstName": "Irfan",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FI",
+          "state": "I",
+          "schoolMail": "20246383@etud.univ-evry.fr",
+          "personalMail": "irfandelen240@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "c834ae70-8436-4e13-96be-bc9fd38616ac",
+          "civility": "",
+          "lastName": "DELMEE",
+          "firstName": "Nicolas",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20245996@etud.univ-evry.fr",
+          "personalMail": "delmee.nicolas77pro@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "ff67c0f5-b9b0-4157-846d-b57df604a8a5",
+          "civility": "",
+          "lastName": "DUCROT",
+          "firstName": "Lea",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP QMI FIA",
+          "state": "I",
+          "schoolMail": "20240290@etud.univ-evry.fr",
+          "personalMail": "lea.ducrot@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "e4259675-af5e-440a-93ad-e8517c8741bb",
+          "civility": "",
+          "lastName": "ESHAK",
+          "firstName": "Adrien",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP QMI FIA",
+          "state": "I",
+          "schoolMail": "20246278@etud.univ-evry.fr",
+          "personalMail": "adrien.eshak@icloud.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "44fcc162-73ee-4e32-a9ee-f476f0456827",
+          "civility": "",
+          "lastName": "FERNANDES",
+          "firstName": "Doria",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP QMI FIA",
+          "state": "I",
+          "schoolMail": "20242568@etud.univ-evry.fr",
+          "personalMail": "d.fernandes1409@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "6e17c20a-27fa-4d9b-b08e-bf67f56720af",
+          "civility": "",
+          "lastName": "FLADENMULLER",
+          "firstName": "Aymen",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FI",
+          "state": "I",
+          "schoolMail": "20246150@etud.univ-evry.fr",
+          "personalMail": "",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "Denis Gerelli",
+          "evaluation": {
+            "bonus": "",
+            "comment": "N'ayant pas de mission encore clairement identifié il est diffcile de répondre aux attentes du 1/3 stage je vous invote a revenir vers moi avec de nouveau document corrigé pour revoir vos notes une fois la mission identifiée.",
+            "validated": true,
+            "validatedAt": "2026-05-14T14:55:52.987Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 3,
+                  "realism": 3,
+                  "dayInputs": 5,
+                  "presentation": 4
+                },
+                "comment": "Planning trop général : les étapes manquent de précision et ne permettent pas de suivre clairement l'avancement.\nLes actions prévues restent descriptives et ne montrent pas assez le pilotage du stage."
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 3,
+                  "clarity": 3,
+                  "dayInputs": 4,
+                  "presentation": 4
+                },
+                "comment": "Les flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance.\nLa présentation graphique manque de lisibilité et gagnerait à être restructurée.\nLes documents, données ou supports échangés ne sont pas assez identifiés."
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 3,
+                  "existing": 3,
+                  "dayInputs": 6,
+                  "presentation": 4
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "240cceab-a1a8-407f-a47b-22a6dd852cfb",
+          "civility": "",
+          "lastName": "GILLET",
+          "firstName": "Morgan",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FIA",
+          "state": "I",
+          "schoolMail": "20235985@etud.univ-evry.fr",
+          "personalMail": "morgann.gillet@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "Denis Gerelli",
+          "evaluation": {
+            "bonus": "",
+            "comment": "On ne voit pas le flux sur la plan de masse, il faut y remédier, la fiche de cadrage semble correcte ainsi que le planning. attention cependant à bien prendre en considération les remarques faites au cours de la journée pour rendre votre projet suffisamment conséquent pour une présentation de deuxième année. ",
+            "validated": true,
+            "validatedAt": "2026-05-14T15:13:15.842Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 7,
+                  "realism": 6,
+                  "dayInputs": 6,
+                  "presentation": 7
+                },
+                "comment": "Les actions prévues restent descriptives et ne montrent pas assez le pilotage du stage."
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 5,
+                  "clarity": 5,
+                  "dayInputs": 6,
+                  "presentation": 6
+                },
+                "comment": "Les flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance.\nLe sens de circulation des flux ou les supports utilisés doivent être précisés.\nCertains flux importants semblent absents ou sous-représentés."
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 7,
+                  "existing": 6,
+                  "dayInputs": 6,
+                  "presentation": 7
+                },
+                "comment": "Les indicateurs de réussite ou critères d'évaluation du projet sont absents ou peu clairs.\nLes livrables attendus et la suite de la démarche doivent être mieux explicités."
+              }
+            }
+          }
+        },
+        {
+          "id": "62633871-276b-408d-83f0-fe5d6d88537d",
+          "civility": "",
+          "lastName": "GODOY SOULAS",
+          "firstName": "Diego",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FIA",
+          "state": "I",
+          "schoolMail": "20244551@etud.univ-evry.fr",
+          "personalMail": "diego.godoysoulas77@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "Denis Gerelli",
+          "evaluation": {
+            "bonus": "",
+            "comment": "On a le sentiment que vous vous contentez du minimum dans l'analyse des flux, le planning semble correct mais assez générique et la fiche de cadrage doit être plus fouillé, là aussi vous vous contentez du minimum. ",
+            "validated": true,
+            "validatedAt": "2026-05-14T15:11:00.915Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 6,
+                  "realism": 5,
+                  "dayInputs": 7,
+                  "presentation": 7
+                },
+                "comment": "Les jalons ne sont pas assez datés ou mesurables.\nLes risques, points de blocage ou dépendances ne sont pas assez anticipés."
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 5,
+                  "clarity": 6,
+                  "dayInputs": 6,
+                  "presentation": 6
+                },
+                "comment": "Les flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance.\nCertains flux importants semblent absents ou sous-représentés."
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 5,
+                  "existing": 5,
+                  "dayInputs": 7,
+                  "presentation": 6
+                },
+                "comment": "Le problème traité n'est pas encore formulé de façon assez précise.\nLe périmètre de l'étude reste trop flou.\nLa situation initiale est décrite de manière trop générale.\nLes enjeux pour l'entreprise ne sont pas suffisamment mis en évidence."
+              }
+            }
+          }
+        },
+        {
+          "id": "dd76d981-5bd0-4b1b-987f-5ce2138af86f",
+          "civility": "",
+          "lastName": "GREGO",
+          "firstName": "Margaux",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FIA",
+          "state": "I",
+          "schoolMail": "20256071@etud.univ-evry.fr",
+          "personalMail": "margauxgrego@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "Denis Gerelli",
+          "evaluation": {
+            "bonus": "",
+            "comment": "C'est un travail sérieux et qui semble avoir été mené de facon rigoureuse mais attention cependant sur votre fiche de cadrage à bien mettre en avant des objectifs chiffrés ainsi que le contexte et les enjeux. C'est encourageant pour la suite",
+            "validated": true,
+            "validatedAt": "2026-05-14T15:22:17.451Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 7,
+                  "realism": 7,
+                  "dayInputs": 7,
+                  "presentation": 7
+                },
+                "comment": "Les risques, points de blocage ou dépendances ne sont pas assez anticipés."
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 7,
+                  "clarity": 7,
+                  "dayInputs": 7,
+                  "presentation": 7
+                },
+                "comment": "Le schéma ne permet pas encore de repérer clairement les dysfonctionnements ou points d'amélioration."
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 7,
+                  "existing": 7,
+                  "dayInputs": 7,
+                  "presentation": 7
+                },
+                "comment": "Les objectifs du projet doivent être rendus plus concrets et mesurables.\nLes indicateurs de réussite ou critères d'évaluation du projet sont absents ou peu clairs."
+              }
+            }
+          }
+        },
+        {
+          "id": "e45999dd-40d2-4c90-9874-d25a7467d6e2",
+          "civility": "",
+          "lastName": "GUENOUN",
+          "firstName": "Ethan",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP QMI FIA",
+          "state": "I",
+          "schoolMail": "20242109@etud.univ-evry.fr",
+          "personalMail": "ethanguenoun55@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "ded0a593-5fa6-47fd-b57a-31daef7a4415",
+          "civility": "",
+          "lastName": "HILLION",
+          "firstName": "Oscar",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP QMI FIA",
+          "state": "I",
+          "schoolMail": "20245873@etud.univ-evry.fr",
+          "personalMail": "oscarhillion77@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "7b8544f3-e936-4c67-b9a9-c56768e289a9",
+          "civility": "",
+          "lastName": "ILERSAINT",
+          "firstName": "Erwan",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FI",
+          "state": "I",
+          "schoolMail": "20256523@etud.univ-evry.fr",
+          "personalMail": "Erwanilersaint@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "Quand vous aurez démarré votre stage , il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "918dde21-35eb-4587-a5ad-df30a31714bb",
+          "civility": "",
+          "lastName": "KHALIL",
+          "firstName": "Rayan",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FIA",
+          "state": "I",
+          "schoolMail": "20247077@etud.univ-evry.fr",
+          "personalMail": "rk2817@hotmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "Denis Gerelli",
+          "evaluation": {
+            "bonus": "",
+            "comment": "Un travail sérieux et rigoureux; Un soin à été apporté dans la présentation de vos livrables et on sent une bonne maitrise de votre projet et des jalons a venir. Continuez",
+            "validated": true,
+            "validatedAt": "2026-05-14T15:26:51.155Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 8,
+                  "realism": 8,
+                  "dayInputs": 8,
+                  "presentation": 8
+                },
+                "comment": "Il faudrait rendre votre planning plus fin, il semble un peu macro"
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 8,
+                  "clarity": 8,
+                  "dayInputs": 8,
+                  "presentation": 8
+                },
+                "comment": "Difficile de faire un diagramme de flux pour votre projet, vous vous en sorte bien avec un choix qui vous est propre mais qui est bien adapté."
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 8,
+                  "existing": 8,
+                  "dayInputs": 8,
+                  "presentation": 8
+                },
+                "comment": "Beaucoup de clarté dans la fiche de cadrage et sa présentation"
+              }
+            }
+          }
+        },
+        {
+          "id": "29b0c350-6b13-45a7-8438-74f0a3fb51a9",
+          "civility": "",
+          "lastName": "KOBI",
+          "firstName": "Sirhiana",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP QMI FI",
+          "state": "I",
+          "schoolMail": "20244729@etud.univ-evry.fr",
+          "personalMail": "kobisirhiana@icloud.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "5b3f2da4-0edf-4763-baf0-a945a256de77",
+          "civility": "",
+          "lastName": "LE GRAND",
+          "firstName": "Peyo",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20240793@etud.univ-evry.fr",
+          "personalMail": "peyolegrand56@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "0e158a5d-fe65-489d-8f58-42c65c29e342",
+          "civility": "",
+          "lastName": "LE VEN",
+          "firstName": "Malo",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FIA",
+          "state": "I",
+          "schoolMail": "20245868@etud.univ-evry.fr",
+          "personalMail": "levenmalo@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "Le travail sur les flux est conséquent mais n'apporte pas grand chose par rapport a votre projet, il faudrait pouvoir vous appuyer sur un diagramme plus simple mais faisant mieux apparaitre votre problématique. attention pour septembre à bien mettre en avant le contexte et les attendus exacte de votre maitre d'apprentissage sans quoi vous risquez d'être confronté au remarques faites lors de la journée 1/3 stage.",
+            "validated": true,
+            "validatedAt": "2026-05-14T15:32:11.531Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 8,
+                  "realism": 8,
+                  "dayInputs": 8,
+                  "presentation": 8
+                },
+                "comment": "Bien dans l'ensemble"
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 7,
+                  "clarity": 7,
+                  "dayInputs": 7,
+                  "presentation": 7
+                },
+                "comment": "Il manque un diagramme de flux plus macro pour bien comprendre votre projet et l'activité de votre société"
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 8,
+                  "existing": 8,
+                  "dayInputs": 8,
+                  "presentation": 8
+                },
+                "comment": "Travail sérieux et assez construit"
+              }
+            }
+          }
+        },
+        {
+          "id": "321cbcb7-c890-4852-bc74-1af6943a2e6b",
+          "civility": "",
+          "lastName": "LEFEVRE",
+          "firstName": "Clement",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20240747@etud.univ-evry.fr",
+          "personalMail": "clemlef91@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "c31004e0-adc4-44b5-b553-4779c42ee8fb",
+          "civility": "",
+          "lastName": "LEVEILLE",
+          "firstName": "Sandy",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP QMI FI",
+          "state": "I",
+          "schoolMail": "20245820@etud.univ-evry.fr",
+          "personalMail": "sandyleve77@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "e544b1ea-50d3-495a-96d9-d21f3688c098",
+          "civility": "",
+          "lastName": "LOVAGLIO",
+          "firstName": "Oscar",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20240207@etud.univ-evry.fr",
+          "personalMail": "oscar.lovaglio@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "9d6255d8-d455-4580-a6f2-f6bbcefe246d",
+          "civility": "",
+          "lastName": "MAS",
+          "firstName": "Timothe",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FIA",
+          "state": "I",
+          "schoolMail": "20245993@etud.univ-evry.fr",
+          "personalMail": "timothem77@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "Votre planning est encore trop macro par rapport aux attendus de votre projet. La fiche de cadrage peut être beaucoup plus précise et enfin le diagramme de flux manque de visibilité. L'ensemble est correct mais pourrait être amélioré en prévision de la soutenance de septembre.",
+            "validated": true,
+            "validatedAt": "2026-05-14T15:40:45.434Z",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "improvement": 6,
+                  "realism": 6,
+                  "dayInputs": 6,
+                  "presentation": 6
+                },
+                "comment": "Planning trop général : les étapes manquent de précision et ne permettent pas de suivre clairement l'avancement.\nLe lien entre les actions prévues et la démarche d'amélioration reste à clarifier.\nLes actions prévues restent descriptives et ne montrent pas assez le pilotage du stage.\nLes jalons ne sont pas assez datés ou mesurables.\nLes risques, points de blocage ou dépendances ne sont pas assez anticipés."
+              },
+              "flow": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "detail": 7,
+                  "clarity": 6,
+                  "dayInputs": 6,
+                  "presentation": 6
+                },
+                "comment": "Manque de clarté de votre diagramme de flux\nLes flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance."
+              },
+              "framing": {
+                "firstVersion": "yes",
+                "criteria": {
+                  "definition": 6,
+                  "existing": 6,
+                  "dayInputs": 7,
+                  "presentation": 7
+                },
+                "comment": "Le problème traité n'est pas encore formulé de façon assez précise."
+              }
+            }
+          }
+        },
+        {
+          "id": "4258f151-ba62-4153-92f6-11e0cd933812",
+          "civility": "",
+          "lastName": "MASSALA",
+          "firstName": "Noah",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FI",
+          "state": "I",
+          "schoolMail": "20245423@etud.univ-evry.fr",
+          "personalMail": "massalanoah@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "Il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "6228ed3f-4c14-488b-83a9-8fe577866377",
+          "civility": "",
+          "lastName": "MAZHAR",
+          "firstName": "Talha",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FI",
+          "state": "I",
+          "schoolMail": "20245701@etud.univ-evry.fr",
+          "personalMail": "mazhartalha15@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "46648c41-6e9f-4b18-9c78-6876cf9a92ca",
+          "civility": "",
+          "lastName": "MOUNIER",
+          "firstName": "Matthieu",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20244745@etud.univ-evry.fr",
+          "personalMail": "mamatt91750@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "8fa8f5f4-b8a9-4c9b-bc3a-7bb5c6f1fada",
+          "civility": "",
+          "lastName": "NOEL SHANJEEV",
+          "firstName": "Lea",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20233223@etud.univ-evry.fr",
+          "personalMail": "leanoel0509@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "952b080a-b314-43dc-9507-24ffdeb28ead",
+          "civility": "",
+          "lastName": "OUAZZANI IBRAHIMI",
+          "firstName": "Amine",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP QMI FI",
+          "state": "I",
+          "schoolMail": "20255790@etud.univ-evry.fr",
+          "personalMail": "amineouazzaniibrahimi@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "4d946511-5521-4573-915d-ac41b1f13d6c",
+          "civility": "",
+          "lastName": "OULD ELEMINE",
+          "firstName": "Sarah",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FI",
+          "state": "I",
+          "schoolMail": "20257090@etud.univ-evry.fr",
+          "personalMail": "Sarah.ouldel@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "Quand vous aurez démarré votre stage , il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "7068d0a4-2846-4644-b18b-3eb9eabc752a",
+          "civility": "",
+          "lastName": "PERRIN-BENHAIM",
+          "firstName": "Louna",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20232259@etud.univ-evry.fr",
+          "personalMail": "louna.liska@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "c53e6e00-2962-4d13-99f1-2caa06465566",
+          "civility": "",
+          "lastName": "POLYDOR",
+          "firstName": "Andy",
+          "path": "OSC",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP OSC FI",
+          "state": "I",
+          "schoolMail": "20256956@etud.univ-evry.fr",
+          "personalMail": "handy.pjeanfrancois@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "Quand vous aurez démarré votre stage , il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "8c14df63-1c4a-4d20-bcc5-87cbfa330b05",
+          "civility": "",
+          "lastName": "SANTENE",
+          "firstName": "Matthieu",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP QMI FI",
+          "state": "I",
+          "schoolMail": "20242867@etud.univ-evry.fr",
+          "personalMail": "mathsantene@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "105e9c7e-5b92-4e70-95d6-66b1db62f90f",
+          "civility": "",
+          "lastName": "SEMBLAT",
+          "firstName": "William",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP QMI FI",
+          "state": "I",
+          "schoolMail": "20244643@etud.univ-evry.fr",
+          "personalMail": "wsemblat@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "cd1c6be3-81aa-49e7-9a72-e0aeef87745c",
+          "civility": "",
+          "lastName": "SILVA FETAL",
+          "firstName": "Simao",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP QMI FIA",
+          "state": "I",
+          "schoolMail": "20245870@etud.univ-evry.fr",
+          "personalMail": "simaofetal@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "63f2e92b-fae2-41e9-84df-f48b5c50b4fd",
+          "civility": "",
+          "lastName": "SOUBRAMANIEN",
+          "firstName": "Kevin",
+          "path": "MTD",
+          "cm": "CM",
+          "td": "TD1",
+          "tp": "TP MTD FIA",
+          "state": "I",
+          "schoolMail": "20246675@etud.univ-evry.fr",
+          "personalMail": "k.soubramanien@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        },
+        {
+          "id": "e578b3f0-9a02-4d1f-b5d9-9f201effc02d",
+          "civility": "",
+          "lastName": "SOYER",
+          "firstName": "Antonin",
+          "path": "QMI",
+          "cm": "CM",
+          "td": "TD2",
+          "tp": "TP QMI FI",
+          "state": "I",
+          "schoolMail": "20235223@etud.univ-evry.fr",
+          "personalMail": "anto.viry.soyer@gmail.com",
+          "company": "",
+          "subject": "",
+          "tutor": "",
+          "mentor": "",
+          "evaluator": "",
+          "evaluation": {
+            "bonus": "",
+            "comment": "",
+            "validated": false,
+            "validatedAt": "",
+            "rubrics": {
+              "planning": {
+                "firstVersion": "",
+                "criteria": {
+                  "improvement": null,
+                  "realism": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "flow": {
+                "firstVersion": "",
+                "criteria": {
+                  "detail": null,
+                  "clarity": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              },
+              "framing": {
+                "firstVersion": "",
+                "criteria": {
+                  "definition": null,
+                  "existing": null,
+                  "dayInputs": null,
+                  "presentation": null
+                },
+                "comment": ""
+              }
+            }
+          }
+        }
+      ],
+      "selectedId": "4258f151-ba62-4153-92f6-11e0cd933812",
+      "createdAt": "2026-05-14T11:06:43.570Z",
+      "updatedAt": "2026-05-14T15:55:52.723Z"
+    }
+  ],
+  "activeCampaignId": "campaign_default",
+  "campaignName": "2025-2026",
+  "students": [
+    {
+      "id": "7af3071c-8ab4-4ef4-909f-ffb91e841f5e",
+      "civility": "",
+      "lastName": "BARRET",
+      "firstName": "Nicolas",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP QMI FIA",
+      "state": "I",
+      "schoolMail": "20246909@etud.univ-evry.fr",
+      "personalMail": "barretnicolas77@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "548476ee-e22a-45da-b316-5ce76f454722",
+      "civility": "",
+      "lastName": "BAUDRY",
+      "firstName": "Maxime",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FIA",
+      "state": "I",
+      "schoolMail": "20245994@etud.univ-evry.fr",
+      "personalMail": "baudry.max91@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "Denis Gerelli",
+      "evaluation": {
+        "bonus": 0,
+        "comment": "La fiche de cadrage est un peu légère, il faut bien insister sur les enjeux et le contexte et bien mettre en avant les indicateurs et objectifs finaux. Le planning aussi est à améliorer pour qu'il rende bien compte du projet, soyez plus ambitieux sur votre périmètre d'action et pensez bien a instaurer une démarche de projet et d'analyse complète.",
+        "validated": true,
+        "validatedAt": "2026-05-14T15:17:12.812Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 6,
+              "realism": 7,
+              "dayInputs": 5,
+              "presentation": 5
+            },
+            "comment": "Le lien entre les actions prevues et la demarche d'amelioration reste a clarifier.\nLes risques, points de blocage ou dependances ne sont pas assez anticipes."
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 7,
+              "clarity": 7,
+              "dayInputs": 7,
+              "presentation": 5
+            },
+            "comment": "Les flux ne sont pas quantifies : volumes, frequences ou delais doivent etre precises pour mesurer leur importance."
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 6,
+              "existing": 6,
+              "dayInputs": 5,
+              "presentation": 5
+            },
+            "comment": "Le probleme traite n'est pas encore formule de facon assez precise.\nLes objectifs du projet doivent etre rendus plus concrets et mesurables."
+          }
+        }
+      }
+    },
+    {
+      "id": "a0becdde-3bc2-48b1-ad3f-c160c3100a39",
+      "civility": "",
+      "lastName": "BELLANGER",
+      "firstName": "Julie",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20244490@etud.univ-evry.fr",
+      "personalMail": "julie.juju.bellanger@free.fr",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "54aafe38-a578-4224-93dd-0bf4a9f2c8e4",
+      "civility": "",
+      "lastName": "BEN AMAR",
+      "firstName": "Amira",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FI",
+      "state": "I",
+      "schoolMail": "20255749@etud.univ-evry.fr",
+      "personalMail": "amirabenamar07@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "Quand vous aurez démarré votre stage , il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "bad53a3c-a435-41ef-bb9f-5d1db07579ca",
+      "civility": "",
+      "lastName": "BETREMA--BOCENO",
+      "firstName": "Enzo",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20235952@etud.univ-evry.fr",
+      "personalMail": "enzo.betrema@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "b8cecbf3-1a3d-42a7-8bea-3a1dfbe8f785",
+      "civility": "",
+      "lastName": "BILGIN",
+      "firstName": "Aylin",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20240276@etud.univ-evry.fr",
+      "personalMail": "bilgin.aylin7700@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "14a8b290-b10e-480c-9c04-b4fdf64bf1b4",
+      "civility": "",
+      "lastName": "CAMBON--CHESNAIS",
+      "firstName": "Alexi",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FIA",
+      "state": "I",
+      "schoolMail": "20245872@etud.univ-evry.fr",
+      "personalMail": "alexi.cambon@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "Denis Gerelli",
+      "evaluation": {
+        "bonus": "",
+        "comment": "L'ensemble est correct mais vous devez encore retraillé votre diagramme de flux qui visuellement n'est pas satisfaisant, notamment le planning macro.",
+        "validated": true,
+        "validatedAt": "2026-05-14T15:14:56.850Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 7,
+              "realism": 6,
+              "dayInputs": 6,
+              "presentation": 7
+            },
+            "comment": "Planning trop général : les étapes manquent de précision et ne permettent pas de suivre clairement l'avancement.\nLes risques, points de blocage ou dépendances ne sont pas assez anticipés."
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 5,
+              "clarity": 5,
+              "dayInputs": 7,
+              "presentation": 6
+            },
+            "comment": "Le schéma des flux ne fait pas apparaître assez clairement les acteurs impliqués.\nLes flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance.\nLe schéma ne permet pas encore de repérer clairement les dysfonctionnements ou points d'amélioration.\nLe diagramme macro manque de lisibilité."
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 7,
+              "existing": 6,
+              "dayInputs": 6,
+              "presentation": 7
+            },
+            "comment": "Le problème traité n'est pas encore formulé de façon assez précise.\nLe périmètre de l'étude reste trop flou.\nL'analyse de l'existant manque de faits, données ou observations terrain."
+          }
+        }
+      }
+    },
+    {
+      "id": "52863615-141f-4fbd-b8f7-ffeefc1e14c8",
+      "civility": "",
+      "lastName": "CHEBAUX",
+      "firstName": "Xavier",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP QMI FIA",
+      "state": "I",
+      "schoolMail": "20245877@etud.univ-evry.fr",
+      "personalMail": "chebauxxavier@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "d46517d5-ff77-4a53-802b-f38f9588ae70",
+      "civility": "",
+      "lastName": "DELEN",
+      "firstName": "Irfan",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FI",
+      "state": "I",
+      "schoolMail": "20246383@etud.univ-evry.fr",
+      "personalMail": "irfandelen240@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "c834ae70-8436-4e13-96be-bc9fd38616ac",
+      "civility": "",
+      "lastName": "DELMEE",
+      "firstName": "Nicolas",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20245996@etud.univ-evry.fr",
+      "personalMail": "delmee.nicolas77pro@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "ff67c0f5-b9b0-4157-846d-b57df604a8a5",
+      "civility": "",
+      "lastName": "DUCROT",
+      "firstName": "Lea",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP QMI FIA",
+      "state": "I",
+      "schoolMail": "20240290@etud.univ-evry.fr",
+      "personalMail": "lea.ducrot@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "e4259675-af5e-440a-93ad-e8517c8741bb",
+      "civility": "",
+      "lastName": "ESHAK",
+      "firstName": "Adrien",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP QMI FIA",
+      "state": "I",
+      "schoolMail": "20246278@etud.univ-evry.fr",
+      "personalMail": "adrien.eshak@icloud.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "44fcc162-73ee-4e32-a9ee-f476f0456827",
+      "civility": "",
+      "lastName": "FERNANDES",
+      "firstName": "Doria",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP QMI FIA",
+      "state": "I",
+      "schoolMail": "20242568@etud.univ-evry.fr",
+      "personalMail": "d.fernandes1409@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "6e17c20a-27fa-4d9b-b08e-bf67f56720af",
+      "civility": "",
+      "lastName": "FLADENMULLER",
+      "firstName": "Aymen",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FI",
+      "state": "I",
+      "schoolMail": "20246150@etud.univ-evry.fr",
+      "personalMail": "",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "Denis Gerelli",
+      "evaluation": {
+        "bonus": "",
+        "comment": "N'ayant pas de mission encore clairement identifié il est diffcile de répondre aux attentes du 1/3 stage je vous invote a revenir vers moi avec de nouveau document corrigé pour revoir vos notes une fois la mission identifiée.",
+        "validated": true,
+        "validatedAt": "2026-05-14T14:55:52.987Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 3,
+              "realism": 3,
+              "dayInputs": 5,
+              "presentation": 4
+            },
+            "comment": "Planning trop général : les étapes manquent de précision et ne permettent pas de suivre clairement l'avancement.\nLes actions prévues restent descriptives et ne montrent pas assez le pilotage du stage."
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 3,
+              "clarity": 3,
+              "dayInputs": 4,
+              "presentation": 4
+            },
+            "comment": "Les flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance.\nLa présentation graphique manque de lisibilité et gagnerait à être restructurée.\nLes documents, données ou supports échangés ne sont pas assez identifiés."
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 3,
+              "existing": 3,
+              "dayInputs": 6,
+              "presentation": 4
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "240cceab-a1a8-407f-a47b-22a6dd852cfb",
+      "civility": "",
+      "lastName": "GILLET",
+      "firstName": "Morgan",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FIA",
+      "state": "I",
+      "schoolMail": "20235985@etud.univ-evry.fr",
+      "personalMail": "morgann.gillet@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "Denis Gerelli",
+      "evaluation": {
+        "bonus": "",
+        "comment": "On ne voit pas le flux sur la plan de masse, il faut y remédier, la fiche de cadrage semble correcte ainsi que le planning. attention cependant à bien prendre en considération les remarques faites au cours de la journée pour rendre votre projet suffisamment conséquent pour une présentation de deuxième année. ",
+        "validated": true,
+        "validatedAt": "2026-05-14T15:13:15.842Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 7,
+              "realism": 6,
+              "dayInputs": 6,
+              "presentation": 7
+            },
+            "comment": "Les actions prévues restent descriptives et ne montrent pas assez le pilotage du stage."
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 5,
+              "clarity": 5,
+              "dayInputs": 6,
+              "presentation": 6
+            },
+            "comment": "Les flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance.\nLe sens de circulation des flux ou les supports utilisés doivent être précisés.\nCertains flux importants semblent absents ou sous-représentés."
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 7,
+              "existing": 6,
+              "dayInputs": 6,
+              "presentation": 7
+            },
+            "comment": "Les indicateurs de réussite ou critères d'évaluation du projet sont absents ou peu clairs.\nLes livrables attendus et la suite de la démarche doivent être mieux explicités."
+          }
+        }
+      }
+    },
+    {
+      "id": "62633871-276b-408d-83f0-fe5d6d88537d",
+      "civility": "",
+      "lastName": "GODOY SOULAS",
+      "firstName": "Diego",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FIA",
+      "state": "I",
+      "schoolMail": "20244551@etud.univ-evry.fr",
+      "personalMail": "diego.godoysoulas77@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "Denis Gerelli",
+      "evaluation": {
+        "bonus": "",
+        "comment": "On a le sentiment que vous vous contentez du minimum dans l'analyse des flux, le planning semble correct mais assez générique et la fiche de cadrage doit être plus fouillé, là aussi vous vous contentez du minimum. ",
+        "validated": true,
+        "validatedAt": "2026-05-14T15:11:00.915Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 6,
+              "realism": 5,
+              "dayInputs": 7,
+              "presentation": 7
+            },
+            "comment": "Les jalons ne sont pas assez datés ou mesurables.\nLes risques, points de blocage ou dépendances ne sont pas assez anticipés."
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 5,
+              "clarity": 6,
+              "dayInputs": 6,
+              "presentation": 6
+            },
+            "comment": "Les flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance.\nCertains flux importants semblent absents ou sous-représentés."
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 5,
+              "existing": 5,
+              "dayInputs": 7,
+              "presentation": 6
+            },
+            "comment": "Le problème traité n'est pas encore formulé de façon assez précise.\nLe périmètre de l'étude reste trop flou.\nLa situation initiale est décrite de manière trop générale.\nLes enjeux pour l'entreprise ne sont pas suffisamment mis en évidence."
+          }
+        }
+      }
+    },
+    {
+      "id": "dd76d981-5bd0-4b1b-987f-5ce2138af86f",
+      "civility": "",
+      "lastName": "GREGO",
+      "firstName": "Margaux",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FIA",
+      "state": "I",
+      "schoolMail": "20256071@etud.univ-evry.fr",
+      "personalMail": "margauxgrego@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "Denis Gerelli",
+      "evaluation": {
+        "bonus": "",
+        "comment": "C'est un travail sérieux et qui semble avoir été mené de facon rigoureuse mais attention cependant sur votre fiche de cadrage à bien mettre en avant des objectifs chiffrés ainsi que le contexte et les enjeux. C'est encourageant pour la suite",
+        "validated": true,
+        "validatedAt": "2026-05-14T15:22:17.451Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 7,
+              "realism": 7,
+              "dayInputs": 7,
+              "presentation": 7
+            },
+            "comment": "Les risques, points de blocage ou dépendances ne sont pas assez anticipés."
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 7,
+              "clarity": 7,
+              "dayInputs": 7,
+              "presentation": 7
+            },
+            "comment": "Le schéma ne permet pas encore de repérer clairement les dysfonctionnements ou points d'amélioration."
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 7,
+              "existing": 7,
+              "dayInputs": 7,
+              "presentation": 7
+            },
+            "comment": "Les objectifs du projet doivent être rendus plus concrets et mesurables.\nLes indicateurs de réussite ou critères d'évaluation du projet sont absents ou peu clairs."
+          }
+        }
+      }
+    },
+    {
+      "id": "e45999dd-40d2-4c90-9874-d25a7467d6e2",
+      "civility": "",
+      "lastName": "GUENOUN",
+      "firstName": "Ethan",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP QMI FIA",
+      "state": "I",
+      "schoolMail": "20242109@etud.univ-evry.fr",
+      "personalMail": "ethanguenoun55@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "ded0a593-5fa6-47fd-b57a-31daef7a4415",
+      "civility": "",
+      "lastName": "HILLION",
+      "firstName": "Oscar",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP QMI FIA",
+      "state": "I",
+      "schoolMail": "20245873@etud.univ-evry.fr",
+      "personalMail": "oscarhillion77@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "7b8544f3-e936-4c67-b9a9-c56768e289a9",
+      "civility": "",
+      "lastName": "ILERSAINT",
+      "firstName": "Erwan",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FI",
+      "state": "I",
+      "schoolMail": "20256523@etud.univ-evry.fr",
+      "personalMail": "Erwanilersaint@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "Quand vous aurez démarré votre stage , il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "918dde21-35eb-4587-a5ad-df30a31714bb",
+      "civility": "",
+      "lastName": "KHALIL",
+      "firstName": "Rayan",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FIA",
+      "state": "I",
+      "schoolMail": "20247077@etud.univ-evry.fr",
+      "personalMail": "rk2817@hotmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "Denis Gerelli",
+      "evaluation": {
+        "bonus": "",
+        "comment": "Un travail sérieux et rigoureux; Un soin à été apporté dans la présentation de vos livrables et on sent une bonne maitrise de votre projet et des jalons a venir. Continuez",
+        "validated": true,
+        "validatedAt": "2026-05-14T15:26:51.155Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 8,
+              "realism": 8,
+              "dayInputs": 8,
+              "presentation": 8
+            },
+            "comment": "Il faudrait rendre votre planning plus fin, il semble un peu macro"
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 8,
+              "clarity": 8,
+              "dayInputs": 8,
+              "presentation": 8
+            },
+            "comment": "Difficile de faire un diagramme de flux pour votre projet, vous vous en sorte bien avec un choix qui vous est propre mais qui est bien adapté."
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 8,
+              "existing": 8,
+              "dayInputs": 8,
+              "presentation": 8
+            },
+            "comment": "Beaucoup de clarté dans la fiche de cadrage et sa présentation"
+          }
+        }
+      }
+    },
+    {
+      "id": "29b0c350-6b13-45a7-8438-74f0a3fb51a9",
+      "civility": "",
+      "lastName": "KOBI",
+      "firstName": "Sirhiana",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP QMI FI",
+      "state": "I",
+      "schoolMail": "20244729@etud.univ-evry.fr",
+      "personalMail": "kobisirhiana@icloud.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "5b3f2da4-0edf-4763-baf0-a945a256de77",
+      "civility": "",
+      "lastName": "LE GRAND",
+      "firstName": "Peyo",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20240793@etud.univ-evry.fr",
+      "personalMail": "peyolegrand56@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "0e158a5d-fe65-489d-8f58-42c65c29e342",
+      "civility": "",
+      "lastName": "LE VEN",
+      "firstName": "Malo",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FIA",
+      "state": "I",
+      "schoolMail": "20245868@etud.univ-evry.fr",
+      "personalMail": "levenmalo@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "Le travail sur les flux est conséquent mais n'apporte pas grand chose par rapport a votre projet, il faudrait pouvoir vous appuyer sur un diagramme plus simple mais faisant mieux apparaitre votre problématique. attention pour septembre à bien mettre en avant le contexte et les attendus exacte de votre maitre d'apprentissage sans quoi vous risquez d'être confronté au remarques faites lors de la journée 1/3 stage.",
+        "validated": true,
+        "validatedAt": "2026-05-14T15:32:11.531Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 8,
+              "realism": 8,
+              "dayInputs": 8,
+              "presentation": 8
+            },
+            "comment": "Bien dans l'ensemble"
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 7,
+              "clarity": 7,
+              "dayInputs": 7,
+              "presentation": 7
+            },
+            "comment": "Il manque un diagramme de flux plus macro pour bien comprendre votre projet et l'activité de votre société"
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 8,
+              "existing": 8,
+              "dayInputs": 8,
+              "presentation": 8
+            },
+            "comment": "Travail sérieux et assez construit"
+          }
+        }
+      }
+    },
+    {
+      "id": "321cbcb7-c890-4852-bc74-1af6943a2e6b",
+      "civility": "",
+      "lastName": "LEFEVRE",
+      "firstName": "Clement",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20240747@etud.univ-evry.fr",
+      "personalMail": "clemlef91@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "c31004e0-adc4-44b5-b553-4779c42ee8fb",
+      "civility": "",
+      "lastName": "LEVEILLE",
+      "firstName": "Sandy",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP QMI FI",
+      "state": "I",
+      "schoolMail": "20245820@etud.univ-evry.fr",
+      "personalMail": "sandyleve77@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "e544b1ea-50d3-495a-96d9-d21f3688c098",
+      "civility": "",
+      "lastName": "LOVAGLIO",
+      "firstName": "Oscar",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20240207@etud.univ-evry.fr",
+      "personalMail": "oscar.lovaglio@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "9d6255d8-d455-4580-a6f2-f6bbcefe246d",
+      "civility": "",
+      "lastName": "MAS",
+      "firstName": "Timothe",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FIA",
+      "state": "I",
+      "schoolMail": "20245993@etud.univ-evry.fr",
+      "personalMail": "timothem77@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "Votre planning est encore trop macro par rapport aux attendus de votre projet. La fiche de cadrage peut être beaucoup plus précise et enfin le diagramme de flux manque de visibilité. L'ensemble est correct mais pourrait être amélioré en prévision de la soutenance de septembre.",
+        "validated": true,
+        "validatedAt": "2026-05-14T15:40:45.434Z",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "yes",
+            "criteria": {
+              "improvement": 6,
+              "realism": 6,
+              "dayInputs": 6,
+              "presentation": 6
+            },
+            "comment": "Planning trop général : les étapes manquent de précision et ne permettent pas de suivre clairement l'avancement.\nLe lien entre les actions prévues et la démarche d'amélioration reste à clarifier.\nLes actions prévues restent descriptives et ne montrent pas assez le pilotage du stage.\nLes jalons ne sont pas assez datés ou mesurables.\nLes risques, points de blocage ou dépendances ne sont pas assez anticipés."
+          },
+          "flow": {
+            "firstVersion": "yes",
+            "criteria": {
+              "detail": 7,
+              "clarity": 6,
+              "dayInputs": 6,
+              "presentation": 6
+            },
+            "comment": "Manque de clarté de votre diagramme de flux\nLes flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés pour mesurer leur importance."
+          },
+          "framing": {
+            "firstVersion": "yes",
+            "criteria": {
+              "definition": 6,
+              "existing": 6,
+              "dayInputs": 7,
+              "presentation": 7
+            },
+            "comment": "Le problème traité n'est pas encore formulé de façon assez précise."
+          }
+        }
+      }
+    },
+    {
+      "id": "4258f151-ba62-4153-92f6-11e0cd933812",
+      "civility": "",
+      "lastName": "MASSALA",
+      "firstName": "Noah",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FI",
+      "state": "I",
+      "schoolMail": "20245423@etud.univ-evry.fr",
+      "personalMail": "massalanoah@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "Il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "6228ed3f-4c14-488b-83a9-8fe577866377",
+      "civility": "",
+      "lastName": "MAZHAR",
+      "firstName": "Talha",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FI",
+      "state": "I",
+      "schoolMail": "20245701@etud.univ-evry.fr",
+      "personalMail": "mazhartalha15@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "46648c41-6e9f-4b18-9c78-6876cf9a92ca",
+      "civility": "",
+      "lastName": "MOUNIER",
+      "firstName": "Matthieu",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20244745@etud.univ-evry.fr",
+      "personalMail": "mamatt91750@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "8fa8f5f4-b8a9-4c9b-bc3a-7bb5c6f1fada",
+      "civility": "",
+      "lastName": "NOEL SHANJEEV",
+      "firstName": "Lea",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20233223@etud.univ-evry.fr",
+      "personalMail": "leanoel0509@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "952b080a-b314-43dc-9507-24ffdeb28ead",
+      "civility": "",
+      "lastName": "OUAZZANI IBRAHIMI",
+      "firstName": "Amine",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP QMI FI",
+      "state": "I",
+      "schoolMail": "20255790@etud.univ-evry.fr",
+      "personalMail": "amineouazzaniibrahimi@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "4d946511-5521-4573-915d-ac41b1f13d6c",
+      "civility": "",
+      "lastName": "OULD ELEMINE",
+      "firstName": "Sarah",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FI",
+      "state": "I",
+      "schoolMail": "20257090@etud.univ-evry.fr",
+      "personalMail": "Sarah.ouldel@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "Quand vous aurez démarré votre stage , il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "7068d0a4-2846-4644-b18b-3eb9eabc752a",
+      "civility": "",
+      "lastName": "PERRIN-BENHAIM",
+      "firstName": "Louna",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20232259@etud.univ-evry.fr",
+      "personalMail": "louna.liska@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "c53e6e00-2962-4d13-99f1-2caa06465566",
+      "civility": "",
+      "lastName": "POLYDOR",
+      "firstName": "Andy",
+      "path": "OSC",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP OSC FI",
+      "state": "I",
+      "schoolMail": "20256956@etud.univ-evry.fr",
+      "personalMail": "handy.pjeanfrancois@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "Quand vous aurez démarré votre stage , il faudra me faire parvenir très rapidement les livrables de la journée 1/3 stage pour que je puisse vous faire un retour et que vous puissiez les modifier. Sans cela vous risquez d'avoir 0 pour le 1/3 stage. Je compte sur vous",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "8c14df63-1c4a-4d20-bcc5-87cbfa330b05",
+      "civility": "",
+      "lastName": "SANTENE",
+      "firstName": "Matthieu",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP QMI FI",
+      "state": "I",
+      "schoolMail": "20242867@etud.univ-evry.fr",
+      "personalMail": "mathsantene@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "105e9c7e-5b92-4e70-95d6-66b1db62f90f",
+      "civility": "",
+      "lastName": "SEMBLAT",
+      "firstName": "William",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP QMI FI",
+      "state": "I",
+      "schoolMail": "20244643@etud.univ-evry.fr",
+      "personalMail": "wsemblat@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "cd1c6be3-81aa-49e7-9a72-e0aeef87745c",
+      "civility": "",
+      "lastName": "SILVA FETAL",
+      "firstName": "Simao",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP QMI FIA",
+      "state": "I",
+      "schoolMail": "20245870@etud.univ-evry.fr",
+      "personalMail": "simaofetal@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "63f2e92b-fae2-41e9-84df-f48b5c50b4fd",
+      "civility": "",
+      "lastName": "SOUBRAMANIEN",
+      "firstName": "Kevin",
+      "path": "MTD",
+      "cm": "CM",
+      "td": "TD1",
+      "tp": "TP MTD FIA",
+      "state": "I",
+      "schoolMail": "20246675@etud.univ-evry.fr",
+      "personalMail": "k.soubramanien@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "e578b3f0-9a02-4d1f-b5d9-9f201effc02d",
+      "civility": "",
+      "lastName": "SOYER",
+      "firstName": "Antonin",
+      "path": "QMI",
+      "cm": "CM",
+      "td": "TD2",
+      "tp": "TP QMI FI",
+      "state": "I",
+      "schoolMail": "20235223@etud.univ-evry.fr",
+      "personalMail": "anto.viry.soyer@gmail.com",
+      "company": "",
+      "subject": "",
+      "tutor": "",
+      "mentor": "",
+      "evaluator": "",
+      "evaluation": {
+        "bonus": "",
+        "comment": "",
+        "validated": false,
+        "validatedAt": "",
+        "rubrics": {
+          "planning": {
+            "firstVersion": "",
+            "criteria": {
+              "improvement": null,
+              "realism": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "flow": {
+            "firstVersion": "",
+            "criteria": {
+              "detail": null,
+              "clarity": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          },
+          "framing": {
+            "firstVersion": "",
+            "criteria": {
+              "definition": null,
+              "existing": null,
+              "dayInputs": null,
+              "presentation": null
+            },
+            "comment": ""
+          }
+        }
+      }
+    }
+  ],
+  "selectedId": "4258f151-ba62-4153-92f6-11e0cd933812",
+  "view": "exports",
+  "filters": {
+    "path": "OSC",
+    "status": "A faire",
+    "search": ""
+  },
+  "theme": "contrast",
+  "dark": false,
+  "backup": {
+    "dirtySinceJsonSave": false,
+    "lastJsonSaveAt": "2026-05-14T15:55:52.724Z",
+    "lastJsonLoadName": "Aucun JSON charge au demarrage"
+  }
+}

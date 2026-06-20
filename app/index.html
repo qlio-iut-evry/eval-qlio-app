@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluation 1/3 stage - BUT QLIO</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="./config.js"></script>
+  <script src="./db.js"></script>
+</head>
+<body>
+  <div id="appTitlebar" class="app-titlebar">
+    <div class="app-titlebar-title">Evaluation 1/3 stage - BUT QLIO</div>
+    <div class="app-window-controls">
+      <button id="minimizeWindowBtn" type="button" title="Reduire">_</button>
+      <button id="maximizeWindowBtn" type="button" title="Agrandir">□</button>
+      <button id="closeWindowBtn" type="button" title="Fermer">x</button>
+    </div>
+  </div>
+  <aside class="sidebar">
+    <header class="brand">
+      <div>
+        <p class="eyebrow">BUT QLIO - 2e annee</p>
+        <h1>Evaluation 1/3 stage</h1>
+      </div>
+      <div id="themeSelect" class="theme-dots" title="Choisir le thème">
+        <button type="button" class="theme-dot" data-theme="contrast" style="background:#ffb000" title="Contraste jaune"></button>
+        <button type="button" class="theme-dot" data-theme="light" style="background:#2f6fca" title="IUT bleu"></button>
+        <button type="button" class="theme-dot" data-theme="dark" style="background:#8b5cf6" title="Nuit violet"></button>
+        <button type="button" class="theme-dot" data-theme="ocean" style="background:#00a896" title="Océan vert"></button>
+      </div>
+    </header>
+
+    <section class="campaign-panel">
+      <label for="campaignSelect">Campagne active</label>
+      <select id="campaignSelect" class="campaign-select"></select>
+      <label for="campaignName">Nom de la campagne</label>
+      <input id="campaignName" type="text" value="2025-2026">
+      <div class="campaign-actions">
+        <button id="renameCampaignBtn" class="ghost-btn">Renommer</button>
+        <button id="newCampaignBtn" class="ghost-btn">Nouvelle</button>
+        <button id="deleteCampaignBtn" class="ghost-btn danger-btn">Supprimer</button>
+        <button id="saveBtn" class="ghost-btn">Sauver local</button>
+      </div>
+    </section>
+
+    <section class="import-panel" id="dropZone">
+      <input id="studentFile" type="file" accept=".xlsx,.xls,.csv" hidden>
+      <button id="importBtn" class="primary-btn">Importer la liste</button>
+      <p>Glissez-deposez ici le fichier Excel/CSV des etudiants, ou cliquez pour le selectionner.</p>
+      <div id="importStatus" class="status-line"></div>
+    </section>
+
+    <section class="filters">
+      <div class="search-wrap">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="searchInput" type="search" placeholder="Rechercher">
+      </div>
+      <div class="filter-row" id="pathFilters"></div>
+      <div class="filter-row" id="stateFilters"></div>
+    </section>
+
+    <nav id="studentList" class="student-list" aria-label="Liste des etudiants"></nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">BUT QLIO - 2e annee</p>
+        <h2 id="pageTitle">Tableau de bord</h2>
+      </div>
+      <div class="top-actions">
+        <button class="tab-btn active" data-view="dashboard">Tableau</button>
+        <button class="tab-btn" data-view="evaluation">Evaluation</button>
+        <button class="tab-btn" data-view="student">Fiche</button>
+        <button class="tab-btn" data-view="recap">Recap</button>
+        <button class="tab-btn" data-view="exports">Sauvegarde</button>
+      </div>
+    </header>
+
+    <section id="dashboardView" class="view active-view">
+      <section class="share-mode-banner">
+        <div>
+          <strong>Mode SharePoint par fichier JSON</strong>
+          <span>Au debut : charger le dernier JSON disponible. Pendant la saisie : sauvegarder regulierement. A la fin : enregistrer un nouveau JSON et le deposer sur SharePoint sans supprimer les anciennes sauvegardes.</span>
+        </div>
+        <button id="quickLoadJsonBtn" class="primary-btn">Charger le dernier JSON</button>
+      </section>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <span>Etudiants</span>
+          <strong id="kpiStudents">0</strong>
+        </article>
+        <article class="kpi-card">
+          <span>Completees</span>
+          <strong id="kpiDone">0</strong>
+        </article>
+        <article class="kpi-card">
+          <span>A faire</span>
+          <strong id="kpiTodo">0</strong>
+        </article>
+        <article class="kpi-card">
+          <span>Moyenne /20</span>
+          <strong id="kpiAverage">-</strong>
+        </article>
+      </div>
+
+      <div class="dashboard-grid">
+        <section class="panel">
+          <header class="panel-head">
+            <h3>Avancement par parcours</h3>
+          </header>
+          <div id="pathStats" class="stats-list"></div>
+        </section>
+        <section class="panel">
+          <header class="panel-head">
+            <h3>Alertes</h3>
+          </header>
+          <div id="alertsList" class="alert-list"></div>
+        </section>
+      </div>
+
+      <div class="dashboard-grid extended">
+        <section class="panel">
+          <header class="panel-head">
+            <h3>Comparaison par groupe</h3>
+          </header>
+          <div id="groupStats" class="table-wrap"></div>
+        </section>
+        <section class="panel">
+          <header class="panel-head">
+            <h3>Moyennes par livrable</h3>
+          </header>
+          <div id="deliverableStats" class="stats-list"></div>
+        </section>
+      </div>
+
+      <section class="panel dashboard-table-panel">
+        <header class="panel-head">
+          <h3>Comparaison par etudiant</h3>
+        </header>
+        <div id="studentComparison" class="table-wrap"></div>
+      </section>
+    </section>
+
+    <section id="evaluationView" class="view">
+      <div class="student-header">
+        <div>
+          <p class="eyebrow" id="selectedPath">Aucun etudiant</p>
+          <h2 id="selectedName">Importez une promotion</h2>
+          <p id="selectedMeta" class="muted"></p>
+        </div>
+        <div class="score-pill">
+          <span>Note 1/3 stage</span>
+          <strong id="score20">-/20</strong>
+          <small id="score60">-/60</small>
+        </div>
+      </div>
+
+      <div id="deliverableScoreCards" class="deliverable-score-grid"></div>
+
+      <div id="rubrics" class="rubric-grid"></div>
+
+      <section class="panel comments-panel">
+        <header class="panel-head">
+          <h3>Commentaires et validation</h3>
+          <span id="completionBadge" class="badge warn">Brouillon</span>
+        </header>
+        <div class="form-grid">
+          <label>
+            Bonus participation
+            <input id="bonusInput" type="number" min="0" max="5" step="0.5">
+          </label>
+          <label>
+            Evaluateur
+            <input id="evaluatorInput" type="text" placeholder="Nom de l'evaluateur">
+          </label>
+          <div class="quick-field">
+            <span>Rapide</span>
+            <div id="evaluatorQuickFill" class="quick-fill"></div>
+          </div>
+        </div>
+        <label>
+          Commentaire general
+          <textarea id="commentInput" rows="4" placeholder="Synthese, points forts, points a revoir..."></textarea>
+        </label>
+        <div class="footer-actions">
+          <button id="prevStudentBtn" class="ghost-btn">Précédent</button>
+          <button id="validateBtn" class="primary-btn">Valider l'évaluation</button>
+          <button id="nextStudentBtn" class="ghost-btn">Suivant</button>
+        </div>
+        <div class="footer-actions mail-actions">
+          <button id="sendMailBtn" class="ghost-btn mail-btn" title="Envoyer les commentaires par mail à l'étudiant">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Envoyer par mail
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <section id="recapView" class="view">
+      <section class="panel recap-panel">
+        <header class="panel-head">
+          <div>
+            <h3>Feuille récap des notes</h3>
+            <p class="muted">Synthèse imprimable de la campagne courante.</p>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button id="sendMailGroupBtn" class="ghost-btn mail-btn" title="Envoyer les commentaires par mail à tous les étudiants">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Envoi groupé
+            </button>
+            <button id="printCommentsBtn" class="ghost-btn">Commentaires PDF</button>
+            <button id="printRecapBtn" class="primary-btn">Imprimer notes</button>
+          </div>
+        </header>
+        <div id="recapTable" class="table-wrap"></div>
+        <div id="commentsTable" class="table-wrap"></div>
+      </section>
+    </section>
+
+    <section id="studentView" class="view">
+      <section class="panel">
+        <header class="panel-head">
+          <h3>Fiche etudiant et stage</h3>
+        </header>
+        <div class="form-grid wide">
+          <label>Nom<input id="lastNameInput" type="text"></label>
+          <label>Prenom<input id="firstNameInput" type="text"></label>
+          <label>Parcours<input id="pathInput" type="text"></label>
+          <label>TD<input id="tdInput" type="text"></label>
+          <label>TP<input id="tpInput" type="text"></label>
+          <label>Mail universitaire<input id="schoolMailInput" type="email"></label>
+          <label>Entreprise<input id="companyInput" type="text"></label>
+          <label>Sujet de stage<input id="subjectInput" type="text"></label>
+          <label>Tuteur pedagogique<input id="tutorInput" type="text"></label>
+          <label>Maitre de stage<input id="mentorInput" type="text"></label>
+        </div>
+      </section>
+    </section>
+
+    <section id="exportsView" class="view">
+      <section class="panel">
+        <header class="panel-head">
+          <div>
+            <h3>Sauvegarde JSON SharePoint</h3>
+            <p id="jsonSaveStatus" class="muted">Aucun fichier JSON de travail charge pour cette session.</p>
+          </div>
+          <span id="jsonDirtyBadge" class="badge warn">A enregistrer</span>
+        </header>
+        <div class="save-warning">
+          En fin de saisie, exportez une nouvelle sauvegarde JSON horodatee et choisissez son emplacement. Ne remplacez pas les anciens fichiers : ils servent d'historique si une information doit etre retrouvee.
+        </div>
+        <div class="save-guide">
+          <article>
+            <strong>1. Debut de session</strong>
+            <span>Chargez le dernier fichier JSON disponible sur SharePoint avant de modifier les evaluations.</span>
+          </article>
+          <article>
+            <strong>2. Pendant la saisie</strong>
+            <span>L'application garde une copie locale automatique, mais elle ne remplace pas la sauvegarde JSON partagee.</span>
+          </article>
+          <article>
+            <strong>3. Fin de session</strong>
+            <span>Exportez un JSON horodate, choisissez le dossier SharePoint, puis conservez les anciennes sauvegardes.</span>
+          </article>
+        </div>
+        <div class="export-grid">
+          <button id="saveDbBtn" class="primary-btn" hidden>Sauvegarder en base</button>
+          <button id="loadDbBtn" class="ghost-btn" hidden>Charger depuis la base</button>
+          <button id="saveJsonBtn" class="ghost-btn">Exporter JSON local</button>
+          <button id="loadJsonBtn" class="ghost-btn">Charger un JSON</button>
+          <button id="exportCsvBtn" class="ghost-btn">Exporter CSV</button>
+          <input id="restoreFile" type="file" accept=".json" hidden>
+        </div>
+        <p class="muted">Si deux personnes travaillent en meme temps a partir du meme JSON, les modifications ne sont pas fusionnees automatiquement. Repartissez-vous les saisies et gardez toutes les sauvegardes.</p>
+      </section>
+    </section>
+  </main>
+
+  <div id="startupModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="startupTitle">
+    <section class="modal-card">
+      <h2 id="startupTitle">Avant de commencer</h2>
+      <p id="startupDesc">Chargez une campagne enregistree avant de modifier les evaluations.</p>
+      <select id="startupDbSelect" class="campaign-select" hidden></select>
+      <div class="modal-actions">
+        <button id="startupLoadDbBtn" class="primary-btn" hidden>Charger depuis la base</button>
+        <button id="startupLoadJsonBtn" class="primary-btn">Charger le dernier JSON</button>
+        <button id="startupSkipBtn" class="ghost-btn">Repartir de zero</button>
+      </div>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <div id="studentHoverCard" class="student-hover-card" aria-hidden="true"></div>
+  <script src="./app.js"></script>
+</body>
+</html>

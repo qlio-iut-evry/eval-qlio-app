@@ -1,0 +1,108 @@
+// Stockage des campagnes via l'API GitHub
+// Remplissez les 3 constantes ci-dessous (voir README pour les obtenir)
+
+// Les constantes GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO sont définies dans config.js (non commité)
+const GITHUB_BRANCH = "main";
+const DATA_DIR = "data";
+
+// ---------- utilitaires ----------
+
+function dbIsConfigured() {
+  return GITHUB_TOKEN !== "YOUR_GITHUB_TOKEN";
+}
+
+async function ghFetch(path, options = {}) {
+  const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`;
+  const res = await fetch(url, {
+    ...options,
+    headers: {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "Content-Type": "application/json",
+      ...(options.headers || {})
+    }
+  });
+  return res;
+}
+
+async function ghRead(path) {
+  const res = await ghFetch(path);
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`GitHub GET ${path} : ${res.status}`);
+  const json = await res.json();
+  return {
+    sha: json.sha,
+    content: JSON.parse(atob(json.content.replace(/\n/g, "")))
+  };
+}
+
+async function ghWrite(path, content, sha, message) {
+  const body = {
+    message: message || `update ${path}`,
+    content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2)))),
+    branch: GITHUB_BRANCH
+  };
+  if (sha) body.sha = sha;
+  const res = await ghFetch(path, { method: "PUT", body: JSON.stringify(body) });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `GitHub PUT ${path} : ${res.status}`);
+  }
+  return true;
+}
+
+// ---------- API publique (appelée depuis app.js) ----------
+
+async function dbListCampaigns() {
+  try {
+    const result = await ghRead(`${DATA_DIR}/index.json`);
+    return result ? result.content : [];
+  } catch (e) {
+    console.error("dbListCampaigns:", e);
+    return [];
+  }
+}
+
+async function dbLoadCampaign(id) {
+  try {
+    const result = await ghRead(`${DATA_DIR}/${id}.json`);
+    return result ? result.content : null;
+  } catch (e) {
+    console.error("dbLoadCampaign:", e);
+    return null;
+  }
+}
+
+async function dbSaveCampaign(id, name, stateData) {
+  try {
+    const now = new Date().toISOString();
+
+    // 1. Écrire le fichier de la campagne
+    const existing = await ghRead(`${DATA_DIR}/${id}.json`);
+    await ghWrite(
+      `${DATA_DIR}/${id}.json`,
+      stateData,
+      existing?.sha,
+      `save campaign ${name}`
+    );
+
+    // 2. Mettre à jour l'index
+    const indexFile = await ghRead(`${DATA_DIR}/index.json`);
+    const index = indexFile ? indexFile.content : [];
+    const entry = index.find((c) => c.id === id);
+    if (entry) {
+      entry.name = name;
+      entry.updated_at = now;
+    } else {
+      index.unshift({ id, name, updated_at: now });
+    }
+    index.sort((a, b) => b.updated_at.localeCompare(a.updated_at));
+    await ghWrite(`${DATA_DIR}/index.json`, index, indexFile?.sha, `index: update ${name}`);
+
+    return true;
+  } catch (e) {
+    console.error("dbSaveCampaign:", e);
+    return false;
+  }
+}
