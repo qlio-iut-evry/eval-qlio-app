@@ -12,7 +12,8 @@ function dbIsConfigured() {
 }
 
 async function ghFetch(path, options = {}) {
-  const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`;
+  const cacheBust = options.method === "PUT" ? "" : `?_=${Date.now()}`;
+  const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}${cacheBust}`;
   const res = await fetch(url, {
     ...options,
     headers: {
