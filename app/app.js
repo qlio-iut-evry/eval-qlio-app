@@ -324,7 +324,11 @@ function scheduleAutoSaveToDb() {
     setDbSyncStatus("sauvegarde...");
     let ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
     if (!ok) {
-      await new Promise(r => setTimeout(r, 2000));
+      const isNetworkError = (window._lastDbError || "").toLowerCase().includes("networkerror") ||
+                             (window._lastDbError || "").toLowerCase().includes("fetch");
+      const retryDelay = isNetworkError ? 30000 : 2000;
+      setDbSyncStatus(isNetworkError ? "reseau indisponible, nouvel essai dans 30s..." : "nouvel essai...");
+      await new Promise(r => setTimeout(r, retryDelay));
       ok = await dbSaveCampaign(state.activeCampaignId, state.campaignName, state);
     }
     _saveInProgress = false;
@@ -336,7 +340,7 @@ function scheduleAutoSaveToDb() {
       setDbSyncStatus("sauvegarde OK");
       setTimeout(() => setDbSyncStatus(""), 3000);
     } else {
-      setDbSyncStatus("erreur: " + (window._lastDbError || "inconnue"));
+      setDbSyncStatus("erreur sauvegarde - donnees conservees localement");
     }
   }, state.view === "student" ? 5000 : 3000);
 }
