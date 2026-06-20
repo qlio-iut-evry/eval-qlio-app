@@ -1162,6 +1162,34 @@ function renderDashboard() {
   el.kpiTodo.textContent = Math.max(students.length - done, 0);
   el.kpiAverage.textContent = average === null ? "-" : formatScore(average);
 
+  const paths = ["Tous", ...Array.from(new Set(state.students.map((s) => s.path).filter(Boolean))).sort()];
+  const dashFilterBar = document.getElementById("dashboardFilterBar");
+  if (dashFilterBar) {
+    dashFilterBar.innerHTML = `
+      <div class="recap-filter-group">
+        <span class="recap-filter-label">Niveau</span>
+        <div class="recap-filter-chips">
+          ${[["Tous","Tous"],["but2","BUT2"],["but3","BUT3"]].map(([v,l]) => `<button class="recap-chip ${state.filters.level === v ? "active" : ""}" data-level="${escapeAttr(v)}">${escapeHtml(l)}</button>`).join("")}
+        </div>
+      </div>
+      <div class="recap-filter-group">
+        <span class="recap-filter-label">Parcours</span>
+        <div class="recap-filter-chips">
+          ${paths.map((p) => `<button class="recap-chip ${state.filters.path === p ? "active" : ""}" data-dash-path="${escapeAttr(p)}">${escapeHtml(p)}</button>`).join("")}
+        </div>
+      </div>
+      <span class="recap-filter-count">${students.length} étudiant${students.length !== 1 ? "s" : ""} affiché${students.length !== 1 ? "s" : ""}</span>
+    `;
+    dashFilterBar.querySelectorAll(".recap-chip").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.dataset.level !== undefined) { state.filters.level = btn.dataset.level; renderFilters(); }
+        if (btn.dataset.dashPath !== undefined) { state.filters.path = btn.dataset.dashPath; renderFilters(); }
+        renderDashboard();
+        renderStudentList();
+      });
+    });
+  }
+
   const grouped = groupBy(students, (student) => student.path || "Sans parcours");
   el.pathStats.innerHTML = Object.entries(grouped).map(([path, rows]) => {
     const pathDone = rows.filter((student) => evaluationStatus(student) === "Valide").length;
@@ -1273,6 +1301,12 @@ function renderRecapTable() {
   el.recapTable.innerHTML = `
     <div class="recap-filter-bar no-print">
       <div class="recap-filter-group">
+        <span class="recap-filter-label">Niveau</span>
+        <div class="recap-filter-chips">
+          ${[["Tous","Tous"],["but2","BUT2"],["but3","BUT3"]].map(([v,l]) => `<button class="recap-chip ${state.filters.level === v ? "active" : ""}" data-level="${escapeAttr(v)}">${escapeHtml(l)}</button>`).join("")}
+        </div>
+      </div>
+      <div class="recap-filter-group">
         <span class="recap-filter-label">Parcours</span>
         <div class="recap-filter-chips">
           ${paths.map((p) => `<button class="recap-chip ${recapFilters.path === p ? "active" : ""}" data-path="${escapeAttr(p)}">${escapeHtml(p)}</button>`).join("")}
@@ -1357,7 +1391,12 @@ function renderRecapTable() {
   // Filtre parcours
   el.recapTable.querySelectorAll(".recap-chip").forEach((btn) => {
     btn.addEventListener("click", () => {
-      recapFilters.path = btn.dataset.path;
+      if (btn.dataset.level !== undefined) {
+        state.filters.level = btn.dataset.level;
+        renderFilters();
+      } else {
+        recapFilters.path = btn.dataset.path;
+      }
       recapSelection.clear();
       renderRecapTable();
     });

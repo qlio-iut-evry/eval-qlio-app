@@ -1531,7 +1531,8 @@ label textarea {
   margin: 4px 0 0;
 }
 
-.recap-filter-bar {
+.recap-filter-bar,
+.dashboard-filter-bar {
   display: flex;
   align-items: center;
   gap: 14px;
