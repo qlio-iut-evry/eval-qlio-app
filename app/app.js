@@ -615,7 +615,7 @@ function renderStudentList() {
     button.addEventListener("blur", hideStudentHoverCard);
     button.addEventListener("click", () => {
       state.selectedId = button.dataset.id;
-      saveState();
+      saveState({ markDirty: false });
       renderStudentList();
       renderSelectedStudent();
       renderDashboard();
@@ -1531,7 +1531,7 @@ function moveSelection(delta) {
   const index = Math.max(0, list.findIndex((student) => student.id === state.selectedId));
   const next = list[(index + delta + list.length) % list.length];
   state.selectedId = next.id;
-  saveState();
+  saveState({ markDirty: false });
   renderStudentList();
   renderSelectedStudent();
   renderDashboard();
@@ -1948,7 +1948,7 @@ function formatDateTime(value) {
 
 async function printRecap() {
   state.view = "recap";
-  saveState();
+  saveState({ markDirty: false });
   renderViews();
   renderRecapTable();
   document.body.classList.add("printing-recap");
@@ -2034,7 +2034,7 @@ function renderCommentsRecap() {
 
 async function printComments() {
   state.view = "recap";
-  saveState();
+  saveState({ markDirty: false });
   renderViews();
   renderCommentsRecap();
   document.body.classList.add("printing-comments");
