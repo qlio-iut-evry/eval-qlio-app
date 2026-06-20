@@ -1663,7 +1663,8 @@ function restoreJson(event) {
 
 async function restoreJsonFile(file, options = {}) {
   try {
-    const text = await file.text();
+    const buffer = await file.arrayBuffer();
+    const text = new TextDecoder("utf-8").decode(buffer);
     applyRestoredState(JSON.parse(text), file.name, options);
     toast("Derniere sauvegarde JSON chargee");
   } catch (error) {
