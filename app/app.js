@@ -517,14 +517,11 @@ function normalizeBackupState() {
 }
 
 function renderBackupStatus() {
-  if (!el.jsonSaveStatus || !el.jsonDirtyBadge) return;
+  if (!el.jsonSaveStatus) return;
   normalizeBackupState();
-  const loaded = state.backup.lastJsonLoadName ? `Fichier charge : ${state.backup.lastJsonLoadName}. ` : "Aucun fichier JSON de travail charge pour cette session. ";
-  const saved = state.backup.lastJsonSaveAt ? `Derniere sauvegarde JSON : ${formatDateTime(state.backup.lastJsonSaveAt)}.` : "Aucune sauvegarde JSON horodatee depuis l'ouverture.";
-  el.jsonSaveStatus.textContent = loaded + saved;
-  el.jsonDirtyBadge.textContent = state.backup.dirtySinceJsonSave ? "A enregistrer" : "JSON a jour";
-  el.jsonDirtyBadge.classList.toggle("ok", !state.backup.dirtySinceJsonSave);
-  el.jsonDirtyBadge.classList.toggle("warn", state.backup.dirtySinceJsonSave);
+  const loaded = state.backup.lastJsonLoadName ? `Campagne chargee : ${state.backup.lastJsonLoadName}.` : "";
+  const saved = state.backup.lastJsonSaveAt ? ` Derniere sauvegarde en base : ${formatDateTime(state.backup.lastJsonSaveAt)}.` : "";
+  el.jsonSaveStatus.textContent = loaded + saved || "Sauvegarde automatique active.";
 }
 
 function renderTheme() {
