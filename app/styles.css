@@ -1020,20 +1020,19 @@ body.is-electron .view {
 }
 
 .preset-manage-btn {
-  background: rgba(29,111,216,.2);
-  border: 1px solid rgba(29,111,216,.5);
+  background: rgba(29,111,216,.25);
+  border: 1px solid #5a9fff;
   color: #7ab8ff;
   font-size: 10px;
   font-weight: 700;
   cursor: pointer;
   padding: 3px 8px;
   border-radius: 4px;
-  transition: color .15s, background .15s, border-color .15s;
+  transition: background .15s, color .15s;
 }
 
 .preset-manage-btn:hover {
-  background: rgba(29,111,216,.4);
-  border-color: #5a9fff;
+  background: rgba(29,111,216,.5);
   color: #fff;
 }
 
@@ -1058,6 +1057,7 @@ body.is-electron .view {
 
 .preset-manager-dialog {
   background: #1e1e2e;
+  color: #e2e2f0;
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 14px;
   width: 520px;
@@ -1136,6 +1136,29 @@ body.is-electron .view {
   font-size: 11px;
   padding: 3px 8px;
   height: auto;
+  color: #e2e2f0;
+  border-color: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.06);
+}
+
+.preset-manager-actions .ghost-btn:hover {
+  background: rgba(255,255,255,.14);
+}
+
+.preset-manager-actions .danger-btn {
+  color: #fca5a5;
+  border-color: rgba(220,38,38,.4);
+  background: rgba(220,38,38,.1);
+}
+
+.preset-manager-actions .danger-btn:hover {
+  background: rgba(220,38,38,.25);
+}
+
+.preset-add-btn {
+  background: #1d6fd8;
+  color: #fff;
+  border: none;
 }
 
 .preset-edit-input {
