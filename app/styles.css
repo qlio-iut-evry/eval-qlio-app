@@ -421,9 +421,6 @@ button:hover {
   background: rgba(255, 255, 255, .12);
 }
 
-.student-row:hover .student-delete-btn {
-  opacity: 1;
-}
 
 .student-item {
   position: relative;
@@ -440,21 +437,24 @@ button:hover {
 }
 
 .student-delete-btn {
-  opacity: 0;
   flex-shrink: 0;
   width: 28px;
   border: 0;
   border-radius: 0 8px 8px 0;
   background: transparent;
-  color: rgba(255,255,255,.4);
+  color: rgba(255,255,255,.18);
   font-size: 11px;
   cursor: pointer;
-  transition: opacity .15s, background .15s, color .15s;
+  transition: background .15s, color .15s;
 }
 
 .student-delete-btn:hover {
-  background: rgba(220,38,38,.25);
+  background: rgba(220,38,38,.3);
   color: #fca5a5;
+}
+
+.student-row:hover .student-delete-btn {
+  color: rgba(255,255,255,.45);
 }
 
 .level-badge {
