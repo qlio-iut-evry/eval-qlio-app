@@ -77,6 +77,89 @@ const RUBRICS = [
   }
 ];
 
+const RUBRIC_COMMENT_PRESETS_BUT3 = {
+  framing: [
+    "Le problème traité n'est pas encore formulé de façon assez précise.",
+    "Les objectifs du projet doivent être rendus plus concrets et mesurables.",
+    "L'analyse de l'existant manque de faits, données ou observations terrain.",
+    "La méthodologie proposée n'est pas assez structurée ou réaliste.",
+    "Le planning manque de jalons précis et de dates.",
+    "Les livrables attendus et la suite de la démarche doivent être mieux explicités.",
+    "Les enjeux pour l'entreprise ne sont pas suffisamment mis en évidence.",
+    "Les indicateurs de réussite ou critères d'évaluation du projet sont absents ou peu clairs.",
+    "La fiche de cadrage ne montre pas assez l'évolution apportée par les retours de la journée.",
+    "La présentation doit être améliorée : structure, lisibilité et qualité de rédaction."
+  ],
+  flow: [
+    "Le schéma des flux ne fait pas apparaître assez clairement les acteurs impliqués.",
+    "Les flux d'information ne sont pas suffisamment explicites.",
+    "Les flux ne sont pas quantifiés : volumes, fréquences ou délais doivent être précisés.",
+    "Le sens de circulation des flux ou les supports utilisés doivent être précisés.",
+    "La présentation graphique manque de lisibilité et gagnerait à être restructurée.",
+    "Certains flux importants semblent absents ou sous-représentés.",
+    "Les documents, données ou supports échangés ne sont pas assez identifiés.",
+    "La frontière entre flux physiques, flux d'information et responsabilités reste confuse.",
+    "Les corrections ou remarques formulées pendant la journée ne sont pas assez visibles dans la version finale."
+  ],
+  dashboard: [
+    "Les indicateurs choisis ne sont pas suffisamment en lien avec les objectifs du projet.",
+    "Le tableau de bord ne permet pas de suivre l'avancement du stage de façon claire.",
+    "Les consignes de présentation ne sont pas respectées : format, structure ou contenu attendu.",
+    "La mise en forme doit être améliorée : lisibilité, cohérence visuelle et organisation.",
+    "Les données présentées manquent de sources ou de justification.",
+    "Certains indicateurs clés sont absents ou insuffisamment renseignés.",
+    "Le tableau de bord ne montre pas assez les évolutions ou tendances attendues.",
+    "La prise en compte des retours de la journée reste insuffisante dans la version finale.",
+    "La présentation orale du tableau de bord manque de clarté ou de structuration.",
+    "Les données chiffrées doivent être mieux mises en valeur ou contextualisées."
+  ]
+};
+
+const RUBRICS_BUT3 = [
+  {
+    id: "framing",
+    title: "Fiche de cadrage",
+    firstVersionLabel: "1ère version rendue au début de journée",
+    criteria: [
+      ["definition", "Définition du projet et des objectifs", "Évaluer si le problème, le périmètre, les objectifs et les livrables attendus sont clairement posés."],
+      ["existing", "Analyse de l'existant", "Vérifier que la situation actuelle est décrite avec des faits, des données ou des observations utiles."],
+      ["methodology", "Méthodologie et planning", "Évaluer si la démarche proposée est structurée, réaliste et accompagnée d'un planning avec des jalons précis."],
+      ["dayInputs", "Prise en compte des apports de la journée", "Mesurer si les conseils de cadrage ont permis d'améliorer la formulation du projet."],
+      ["presentation", "Présentation", "Apprécier la structure, la lisibilité, la précision du vocabulaire et la qualité de rédaction."]
+    ]
+  },
+  {
+    id: "flow",
+    title: "Schéma des flux",
+    firstVersionLabel: "1ère version rendue au début de journée",
+    criteria: [
+      ["detail", "Pertinence du niveau de détail", "Évaluer si le schéma montre les flux importants sans être trop vague ni inutilement compliqué."],
+      ["clarity", "Clarté et explications", "Vérifier que les flux, acteurs, supports, informations et sens de circulation sont compréhensibles."],
+      ["dayInputs", "Prise en compte des apports de la journée", "Mesurer si les corrections demandées pendant la journée ont été prises en compte dans le schéma."],
+      ["presentation", "Présentation", "Apprécier la propreté graphique, l'organisation visuelle, les légendes et la facilité de lecture."]
+    ]
+  },
+  {
+    id: "dashboard",
+    title: "Tableau de bord",
+    firstVersionLabel: "1ère version rendue au début de journée",
+    criteria: [
+      ["compliance", "Respect des consignes", "Vérifier que le tableau de bord respecte le format, la structure et le contenu attendus dans le cadre du stage."],
+      ["layout", "Mise en forme et lisibilité", "Apprécier la clarté visuelle, la cohérence graphique et la facilité de lecture des indicateurs."],
+      ["dayInputs", "Prise en compte des apports de la journée", "Mesurer si les retours formulés pendant la journée ont été intégrés dans la version finale."],
+      ["presentation", "Présentation", "Évaluer la capacité à présenter et expliquer le tableau de bord, à justifier les choix d'indicateurs."]
+    ]
+  }
+];
+
+function activeRubrics(student) {
+  return student?.butLevel === "but3" ? RUBRICS_BUT3 : RUBRICS;
+}
+
+function activePresets(student) {
+  return student?.butLevel === "but3" ? RUBRIC_COMMENT_PRESETS_BUT3 : RUBRIC_COMMENT_PRESETS;
+}
+
 const HEADERS = {
   civility: ["civ", "civilite"],
   lastName: ["nom"],
@@ -97,7 +180,7 @@ const state = {
   students: [],
   selectedId: null,
   view: "dashboard",
-  filters: { path: "Tous", status: "Tous", search: "" },
+  filters: { path: "Tous", status: "Tous", level: "Tous", search: "" },
   theme: "contrast",
   dark: false,
   backup: {
@@ -127,7 +210,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 function cacheElements() {
   [
     "themeSelect", "campaignSelect", "campaignName", "renameCampaignBtn", "newCampaignBtn", "deleteCampaignBtn", "saveBtn", "dropZone", "studentFile",
-    "importBtn", "importStatus", "searchInput", "pathFilters", "stateFilters", "studentList",
+    "importBtn", "importStatus", "searchInput", "pathFilters", "stateFilters", "levelFilters", "studentList",
     "pageTitle", "dashboardView", "evaluationView", "studentView", "recapView", "exportsView",
     "kpiStudents", "kpiDone", "kpiTodo", "kpiAverage", "pathStats", "alertsList", "groupStats",
     "deliverableStats", "studentComparison", "deliverableScoreCards",
@@ -249,6 +332,19 @@ function bindEvents() {
     ["mentorInput", "mentor"]
   ].forEach(([inputId, field]) => {
     el[inputId].addEventListener("input", () => updateStudentField(field, el[inputId].value));
+  });
+
+  document.getElementById("butLevelBtns").querySelectorAll("button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const student = selectedStudent();
+      if (!student) return;
+      student.butLevel = btn.dataset.value;
+      saveState();
+      renderRubrics();
+      renderSelectedStudent();
+      renderStudentList();
+      renderFilters();
+    });
   });
 
   el.sendMailBtn.addEventListener("click", sendMailToStudent);
@@ -578,6 +674,19 @@ function renderFilters() {
       renderFilters();
     });
   });
+
+  const levels = ["Tous", "but2", "but3"];
+  const levelLabels = { "Tous": "Tous", "but2": "BUT2", "but3": "BUT3" };
+  el.levelFilters.innerHTML = levels.map((level) => (
+    `<button class="chip ${state.filters.level === level ? "active" : ""}" data-level="${escapeAttr(level)}">${escapeHtml(levelLabels[level])}</button>`
+  )).join("");
+  el.levelFilters.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.filters.level = button.dataset.level;
+      renderStudentList();
+      renderFilters();
+    });
+  });
 }
 
 function renderStudentList() {
@@ -650,7 +759,10 @@ function studentTooltipHtml(student) {
 }
 
 function renderRubrics() {
-  el.rubrics.innerHTML = RUBRICS.map((rubric) => `
+  const student = selectedStudent();
+  const rubrics = activeRubrics(student);
+  const presets = activePresets(student);
+  el.rubrics.innerHTML = rubrics.map((rubric) => `
     <article class="rubric" data-rubric="${rubric.id}">
       <header>
         <h3>${escapeHtml(rubric.title)}</h3>
@@ -677,7 +789,7 @@ function renderRubrics() {
           <textarea data-rubric-comment="${escapeAttr(rubric.id)}" rows="3" placeholder="Remarque specifique a ce livrable..."></textarea>
         </label>
         <div class="comment-presets" aria-label="Commentaires types ${escapeAttr(rubric.title)}">
-          ${(RUBRIC_COMMENT_PRESETS[rubric.id] || []).map((preset) => `
+          ${(presets[rubric.id] || []).map((preset) => `
             <button type="button" data-comment-preset="${escapeAttr(preset)}" title="${escapeAttr(preset)}" aria-label="${escapeAttr(preset)}">${escapeHtml(shortPresetLabel(preset))}</button>
           `).join("")}
         </div>
@@ -841,6 +953,10 @@ function fillInputs(student) {
   el.subjectInput.value = student.subject || "";
   el.tutorInput.value = student.tutor || "";
   el.mentorInput.value = student.mentor || "";
+  const level = student.butLevel || "but2";
+  document.getElementById("butLevelBtns").querySelectorAll("button").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.value === level);
+  });
 }
 
 function setRubricControls(student) {
@@ -868,7 +984,7 @@ function setRubricControls(student) {
 
 function renderDeliverableScores(student) {
   const details = student ? calculateScore(student).rubrics : [];
-  el.deliverableScoreCards.innerHTML = RUBRICS.map((rubric) => {
+  el.deliverableScoreCards.innerHTML = activeRubrics(student).map((rubric) => {
     const detail = details.find((item) => item.id === rubric.id);
     const text20 = detail && detail.score20 !== null ? `${formatScore(detail.score20)}/20` : "-/20";
     const textRaw = detail && detail.scoreRaw !== null ? `${formatScore(detail.scoreRaw)}/20 brut` : "Non renseigne";
@@ -957,8 +1073,10 @@ function renderGroupStats() {
 }
 
 function renderDeliverableStats() {
-  const rows = RUBRICS.map((rubric) => {
+  const allRubrics = [...RUBRICS, ...RUBRICS_BUT3].filter((r, i, arr) => arr.findIndex((x) => x.id === r.id) === i);
+  const rows = allRubrics.map((rubric) => {
     const values = state.students
+      .filter((s) => activeRubrics(s).some((r) => r.id === rubric.id))
       .map((student) => calculateScore(student).rubrics.find((item) => item.id === rubric.id)?.score20)
       .filter((value) => value !== null && value !== undefined);
     const avg = values.length ? averageOf(values) : null;
@@ -977,17 +1095,19 @@ function renderDeliverableStats() {
 function renderStudentComparison() {
   const rows = state.students.map((student) => studentRecapRow(student));
   el.studentComparison.innerHTML = tableHtml([
-    "Nom", "Prenom", "Groupe", "Planning", "Flux", "Cadrage", "Total /20", "Statut"
+    "Nom", "Prenom", "Niveau", "Groupe", "Planning", "Flux", "Cadrage", "TdB", "Total /20", "Statut"
   ], rows.map((row) => [
     row.lastName,
     row.firstName,
+    row.butLevel,
     row.path || "-",
-    row.planning,
+    row.planning ?? "-",
     row.flow,
     row.framing,
+    row.dashboard ?? "-",
     row.total20,
     row.status
-  ]), [3, 4, 5, 6]);
+  ]), [4, 5, 6, 7, 8]);
 }
 
 function renderRecapTable() {
@@ -1040,10 +1160,12 @@ function renderRecapTable() {
         <col class="col-check no-print">
         <col class="col-name">
         <col class="col-first">
+        <col class="col-level">
         <col class="col-path">
         <col class="col-td">
         <col class="col-company">
         <col class="col-subject">
+        <col class="col-note">
         <col class="col-note">
         <col class="col-note">
         <col class="col-note">
@@ -1055,6 +1177,7 @@ function renderRecapTable() {
           <th class="col-check no-print"><input type="checkbox" class="recap-check-all" title="Tout sélectionner" ${allSelected ? "checked" : ""}></th>
           <th>Nom</th>
           <th>Prenom</th>
+          <th>Niv.</th>
           <th>Parc.</th>
           <th>TD</th>
           <th>Entreprise</th>
@@ -1062,6 +1185,7 @@ function renderRecapTable() {
           <th class="num">Planning</th>
           <th class="num">Flux</th>
           <th class="num">Cadrage</th>
+          <th class="num">TdB</th>
           <th class="num">Note /20</th>
           <th>Statut</th>
         </tr>
@@ -1072,17 +1196,19 @@ function renderRecapTable() {
             <td class="col-check no-print"><input type="checkbox" class="recap-row-check" data-id="${escapeAttr(row.id)}" ${recapSelection.has(row.id) ? "checked" : ""}></td>
             <td class="strong">${escapeHtml(row.lastName)}</td>
             <td>${escapeHtml(row.firstName)}</td>
+            <td><span class="mini-badge">${escapeHtml(row.butLevel)}</span></td>
             <td><span class="mini-badge">${escapeHtml(row.path || "-")}</span></td>
             <td>${escapeHtml(row.td || "-")}</td>
             <td>${escapeHtml(row.company || "")}</td>
             <td>${escapeHtml(row.subject || "")}</td>
-            <td class="num">${escapeHtml(row.planning)}</td>
+            <td class="num">${escapeHtml(row.planning ?? "-")}</td>
             <td class="num">${escapeHtml(row.flow)}</td>
             <td class="num">${escapeHtml(row.framing)}</td>
+            <td class="num">${escapeHtml(row.dashboard ?? "-")}</td>
             <td class="num strong">${escapeHtml(row.total20)}</td>
             <td><span class="status-print status-${slug(row.status)}">${escapeHtml(row.status)}</span></td>
           </tr>
-        `).join("") : `<tr><td colspan="12" class="recap-empty">Aucun étudiant ne correspond aux filtres.</td></tr>`}
+        `).join("") : `<tr><td colspan="14" class="recap-empty">Aucun étudiant ne correspond aux filtres.</td></tr>`}
       </tbody>
     </table>
   `;
@@ -1158,6 +1284,8 @@ function updateRecapSelectionUI() {
 function studentRecapRow(student) {
   const score = calculateScore(student);
   const detail = Object.fromEntries(score.rubrics.map((item) => [item.id, item]));
+  const isBut3 = (student.butLevel || "but2") === "but3";
+  const fmt = (d) => d?.score20 == null ? "-" : formatScore(d.score20);
   return {
     id: student.id,
     lastName: student.lastName,
@@ -1167,12 +1295,15 @@ function studentRecapRow(student) {
     tp: student.tp,
     company: student.company,
     subject: student.subject,
-    planning: detail.planning?.score20 === null ? "-" : formatScore(detail.planning.score20),
-    flow: detail.flow?.score20 === null ? "-" : formatScore(detail.flow.score20),
-    framing: detail.framing?.score20 === null ? "-" : formatScore(detail.framing.score20),
+    butLevel: isBut3 ? "BUT3" : "BUT2",
+    planning: isBut3 ? null : fmt(detail.planning),
+    flow: fmt(detail.flow),
+    framing: fmt(detail.framing),
+    dashboard: isBut3 ? fmt(detail.dashboard) : null,
     planningComment: student.evaluation.rubrics.planning?.comment || "",
     flowComment: student.evaluation.rubrics.flow?.comment || "",
     framingComment: student.evaluation.rubrics.framing?.comment || "",
+    dashboardComment: student.evaluation.rubrics.dashboard?.comment || "",
     total60: score.total60 === null ? "-" : formatScore(score.total60),
     total20: score.total20 === null ? "-" : formatScore(score.total20),
     status: evaluationStatus(student),
@@ -1248,7 +1379,7 @@ function validateEvaluation() {
 
 function missingEvaluationFields(student) {
   const missing = [];
-  RUBRICS.forEach((rubric) => {
+  activeRubrics(student).forEach((rubric) => {
     const data = student.evaluation.rubrics[rubric.id];
     if (!data.firstVersion) missing.push(`${rubric.title} : depot initial`);
     rubric.criteria.forEach(([key, label]) => {
@@ -1260,9 +1391,10 @@ function missingEvaluationFields(student) {
 
 function calculateScore(student) {
   if (!student) return { total60: null, total20: null, rubrics: [] };
-  const details = RUBRICS.map((rubric) => {
+  const rubrics = activeRubrics(student);
+  const details = rubrics.map((rubric) => {
     const data = student.evaluation.rubrics[rubric.id];
-    const values = rubric.criteria.map(([key]) => data.criteria[key]).filter((value) => Number.isFinite(value));
+    const values = rubric.criteria.map(([key]) => data?.criteria?.[key]).filter((value) => Number.isFinite(value));
     if (!values.length) {
       return {
         id: rubric.id,
@@ -1274,7 +1406,7 @@ function calculateScore(student) {
       };
     }
     const subtotal = values.reduce((part, value) => part + value, 0);
-    const score20 = subtotal / 2;
+    const score20 = (subtotal * 2) / rubric.criteria.length;
     const penalty = data.firstVersion === "no" ? 0.5 : 1;
     const penalized = penalty < 1;
     return {
@@ -1296,7 +1428,7 @@ function calculateScore(student) {
 function evaluationStatus(student) {
   if (student.evaluation.validated) return "Valide";
   const missing = missingEvaluationFields(student);
-  if (missing.length === RUBRICS.reduce((sum, rubric) => sum + rubric.criteria.length + 1, 0)) return "A faire";
+  if (missing.length === activeRubrics(student).reduce((sum, rubric) => sum + rubric.criteria.length + 1, 0)) return "A faire";
   return "En cours";
 }
 
@@ -1459,6 +1591,7 @@ function normalizeStudent(student) {
     tutor: student.tutor || "",
     mentor: student.mentor || "",
     evaluator: student.evaluator || "",
+    butLevel: student.butLevel || "but2",
     evaluation: student.evaluation || {}
   };
 
@@ -1470,7 +1603,7 @@ function normalizeStudent(student) {
     rubrics: normalized.evaluation.rubrics || {}
   };
 
-  RUBRICS.forEach((rubric) => {
+  [...RUBRICS, ...RUBRICS_BUT3].forEach((rubric) => {
     const data = normalized.evaluation.rubrics[rubric.id] || {};
     normalized.evaluation.rubrics[rubric.id] = {
       firstVersion: data.firstVersion || "",
@@ -1492,8 +1625,9 @@ function filteredStudents() {
   return state.students.filter((student) => {
     const matchesPath = state.filters.path === "Tous" || student.path === state.filters.path;
     const matchesStatus = state.filters.status === "Tous" || evaluationStatus(student) === state.filters.status;
+    const matchesLevel = state.filters.level === "Tous" || (student.butLevel || "but2") === state.filters.level;
     const haystack = normalizeHeader(`${student.lastName} ${student.firstName} ${student.company} ${student.subject}`);
-    return matchesPath && matchesStatus && haystack.includes(search);
+    return matchesPath && matchesStatus && matchesLevel && haystack.includes(search);
   });
 }
 
@@ -1555,7 +1689,7 @@ function buildMailBody(student) {
   lines.push("");
 
   score.rubrics.forEach((detail) => {
-    const rubric = RUBRICS.find((r) => r.id === detail.id);
+    const rubric = activeRubrics(student).find((r) => r.id === detail.id);
     const comment = student.evaluation.rubrics[detail.id]?.comment?.trim();
     if (!comment) return;
     lines.push(`▶ ${rubric.title}`);
@@ -1629,8 +1763,10 @@ async function sendMailToAll() {
 function exportCsv() {
   const rows = state.students.map((student) => {
     const row = studentRecapRow(student);
+    const isBut3 = (student.butLevel || "but2") === "but3";
     return {
       campagne: state.campaignName,
+      niveau: row.butLevel,
       nom: student.lastName,
       prenom: student.firstName,
       parcours: student.path,
@@ -1640,12 +1776,14 @@ function exportCsv() {
       sujet: student.subject,
       evaluateur: student.evaluator,
       statut: evaluationStatus(student),
-      planning_sur_20: row.planning,
+      planning_sur_20: isBut3 ? "" : row.planning,
       schema_flux_sur_20: row.flow,
       fiche_cadrage_sur_20: row.framing,
-      commentaire_planning: row.planningComment,
+      tableau_de_bord_sur_20: isBut3 ? row.dashboard : "",
+      commentaire_planning: isBut3 ? "" : row.planningComment,
       commentaire_schema_flux: row.flowComment,
       commentaire_fiche_cadrage: row.framingComment,
+      commentaire_tableau_de_bord: isBut3 ? row.dashboardComment : "",
       note_sur_60: row.total60,
       note_sur_20: row.total20,
       commentaire: student.evaluation.comment || ""
@@ -1959,7 +2097,7 @@ function renderCommentsRecap() {
     const totalStr = score.total20 !== null ? `${formatScore(score.total20)}/20` : "—";
 
     const rubricBlocks = score.rubrics.map((detail) => {
-      const rubric = RUBRICS.find((r) => r.id === detail.id);
+      const rubric = activeRubrics(student).find((r) => r.id === detail.id);
       const noteStr = detail.score20 !== null ? `${formatScore(detail.score20)}/20` : "—";
       const penalStr = detail.penalized ? ' <span class="comment-penalty">pénalité 1ère version</span>' : "";
       const comment = student.evaluation.rubrics[detail.id]?.comment?.trim();

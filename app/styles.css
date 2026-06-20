@@ -1006,6 +1006,22 @@ body.is-electron .view {
   grid-template-columns: repeat(3, minmax(180px, 1fr));
 }
 
+.but-level-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.but-level-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 .comments-panel .form-grid {
   grid-template-columns: 150px minmax(220px, .8fr) minmax(240px, 1.2fr);
   align-items: end;

@@ -60,6 +60,7 @@
       </div>
       <div class="filter-row" id="pathFilters"></div>
       <div class="filter-row" id="stateFilters"></div>
+      <div class="filter-row" id="levelFilters"></div>
     </section>
 
     <nav id="studentList" class="student-list" aria-label="Liste des etudiants"></nav>
@@ -221,6 +222,13 @@
         <header class="panel-head">
           <h3>Fiche etudiant et stage</h3>
         </header>
+        <div class="but-level-row">
+          <span class="but-level-label">Niveau BUT</span>
+          <div class="segmented" id="butLevelBtns">
+            <button data-value="but2">BUT2</button>
+            <button data-value="but3">BUT3</button>
+          </div>
+        </div>
         <div class="form-grid wide">
           <label>Nom<input id="lastNameInput" type="text"></label>
           <label>Prenom<input id="firstNameInput" type="text"></label>
