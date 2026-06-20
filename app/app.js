@@ -463,7 +463,7 @@ function renameActiveCampaign() {
 function setView(view) {
   if (view === "collaboration") view = "exports";
   state.view = view;
-  saveState();
+  saveState({ markDirty: false });
   renderViews();
 }
 
