@@ -157,7 +157,9 @@ function activeRubrics(student) {
 }
 
 function activePresets(student) {
-  return student?.butLevel === "but3" ? RUBRIC_COMMENT_PRESETS_BUT3 : RUBRIC_COMMENT_PRESETS;
+  initPresets();
+  const level = student?.butLevel === "but3" ? "but3" : "but2";
+  return state.presets[level];
 }
 
 const HEADERS = {
@@ -183,12 +185,25 @@ const state = {
   filters: { path: "Tous", status: "Tous", level: "Tous", search: "" },
   theme: "contrast",
   dark: false,
+  presets: null,
   backup: {
     dirtySinceJsonSave: true,
     lastJsonSaveAt: "",
     lastJsonLoadName: ""
   }
 };
+
+function initPresets() {
+  if (!state.presets) {
+    state.presets = {
+      but2: JSON.parse(JSON.stringify(RUBRIC_COMMENT_PRESETS)),
+      but3: JSON.parse(JSON.stringify(RUBRIC_COMMENT_PRESETS_BUT3))
+    };
+  }
+  ["but2", "but3"].forEach((lvl) => {
+    if (!state.presets[lvl]) state.presets[lvl] = {};
+  });
+}
 
 const el = {};
 
@@ -389,6 +404,7 @@ function loadState() {
     migrateCampaigns();
     if (!state.theme) state.theme = state.dark ? "dark" : "light";
     normalizeBackupState();
+    initPresets();
     state.students = (state.students || []).map(normalizeStudent);
     loadActiveCampaignIntoWorkingState();
   } catch (error) {
@@ -801,10 +817,11 @@ function renderRubrics() {
             </div>
           </div>
         `).join("")}
-        <label class="rubric-comment">
-          Commentaire libre ${escapeHtml(rubric.title)}
-          <textarea data-rubric-comment="${escapeAttr(rubric.id)}" rows="3" placeholder="Remarque specifique a ce livrable..."></textarea>
-        </label>
+        <div class="rubric-comment-head">
+          <label class="rubric-comment-label">Commentaire libre ${escapeHtml(rubric.title)}</label>
+          <button type="button" class="preset-manage-btn" data-rubric="${escapeAttr(rubric.id)}" title="Gérer les commentaires types">⚙</button>
+        </div>
+        <textarea data-rubric-comment="${escapeAttr(rubric.id)}" rows="3" placeholder="Remarque specifique a ce livrable..."></textarea>
         <div class="comment-presets" aria-label="Commentaires types ${escapeAttr(rubric.title)}">
           ${(presets[rubric.id] || []).map((preset) => `
             <button type="button" data-comment-preset="${escapeAttr(preset)}" title="${escapeAttr(preset)}" aria-label="${escapeAttr(preset)}">${escapeHtml(shortPresetLabel(preset))}</button>
@@ -870,6 +887,105 @@ function renderRubrics() {
       autosaveRenderStudent();
     });
   });
+
+  el.rubrics.querySelectorAll(".preset-manage-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const student = selectedStudent();
+      if (!student) return;
+      openPresetManager(button.dataset.rubric, student.butLevel || "but2");
+    });
+  });
+}
+
+function openPresetManager(rubricId, level) {
+  initPresets();
+  const rubrics = level === "but3" ? RUBRICS_BUT3 : RUBRICS;
+  const rubric = rubrics.find((r) => r.id === rubricId);
+  const levelLabel = level === "but3" ? "BUT3" : "BUT2";
+
+  const overlay = document.createElement("div");
+  overlay.className = "preset-manager-overlay";
+
+  const renderContent = () => {
+    const list = state.presets[level][rubricId] || [];
+    overlay.innerHTML = `
+      <div class="preset-manager-dialog">
+        <div class="preset-manager-head">
+          <span class="preset-manager-title">Commentaires types — ${escapeHtml(rubric?.title || rubricId)} <span class="preset-level-tag">${levelLabel}</span></span>
+          <button class="preset-manager-close" type="button">✕</button>
+        </div>
+        <div class="preset-manager-list">
+          ${list.length ? list.map((text, i) => `
+            <div class="preset-manager-item" data-index="${i}">
+              <span class="preset-manager-text">${escapeHtml(text)}</span>
+              <div class="preset-manager-actions">
+                <button class="preset-edit-btn ghost-btn" data-index="${i}">Modifier</button>
+                <button class="preset-delete-btn ghost-btn danger-btn" data-index="${i}">Supprimer</button>
+              </div>
+            </div>
+          `).join("") : `<p class="preset-empty">Aucun commentaire type.</p>`}
+        </div>
+        <div class="preset-add-row">
+          <textarea class="preset-add-input" rows="2" placeholder="Nouveau commentaire type..."></textarea>
+          <button class="preset-add-btn primary-btn" type="button">Ajouter</button>
+        </div>
+      </div>
+    `;
+
+    overlay.querySelector(".preset-manager-close").addEventListener("click", () => document.body.removeChild(overlay));
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) document.body.removeChild(overlay); });
+
+    overlay.querySelectorAll(".preset-delete-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        state.presets[level][rubricId].splice(Number(btn.dataset.index), 1);
+        saveState();
+        renderContent();
+        renderRubrics();
+        setRubricControls(selectedStudent());
+      });
+    });
+
+    overlay.querySelectorAll(".preset-edit-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const idx = Number(btn.dataset.index);
+        const item = overlay.querySelector(`.preset-manager-item[data-index="${idx}"]`);
+        const current = state.presets[level][rubricId][idx];
+        item.innerHTML = `
+          <textarea class="preset-edit-input" rows="2">${escapeHtml(current)}</textarea>
+          <div class="preset-manager-actions">
+            <button class="preset-save-edit-btn primary-btn" type="button">Enregistrer</button>
+            <button class="preset-cancel-edit-btn ghost-btn" type="button">Annuler</button>
+          </div>
+        `;
+        item.querySelector(".preset-cancel-edit-btn").addEventListener("click", renderContent);
+        item.querySelector(".preset-save-edit-btn").addEventListener("click", () => {
+          const val = item.querySelector(".preset-edit-input").value.trim();
+          if (!val) return;
+          state.presets[level][rubricId][idx] = val;
+          saveState();
+          renderContent();
+          renderRubrics();
+          setRubricControls(selectedStudent());
+        });
+      });
+    });
+
+    const addBtn = overlay.querySelector(".preset-add-btn");
+    const addInput = overlay.querySelector(".preset-add-input");
+    addBtn.addEventListener("click", () => {
+      const val = addInput.value.trim();
+      if (!val) return;
+      if (!state.presets[level][rubricId]) state.presets[level][rubricId] = [];
+      state.presets[level][rubricId].push(val);
+      saveState();
+      renderContent();
+      renderRubrics();
+      setRubricControls(selectedStudent());
+    });
+  };
+
+  renderContent();
+  document.body.appendChild(overlay);
 }
 
 function shortPresetLabel(text) {
