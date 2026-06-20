@@ -1815,20 +1815,39 @@ function initDbMode() {
 
 async function showStartupWarning() {
   if (!el.startupModal) return;
-  const db = typeof dbIsConfigured !== "undefined" && dbIsConfigured();
+  let db = false;
+  try {
+    db = typeof dbIsConfigured !== "undefined" && dbIsConfigured();
+  } catch (e) { db = false; }
+
   if (db) {
-    if (el.startupDesc) el.startupDesc.textContent = "Selectionnez une campagne a charger depuis la base de donnees.";
-    if (el.startupLoadJsonBtn) el.startupLoadJsonBtn.textContent = "Fichier JSON local";
-    const campaigns = await dbListCampaigns();
-    if (el.startupDbSelect) {
-      el.startupDbSelect.innerHTML = campaigns.length
-        ? campaigns.map((c) => `<option value="${escapeAttr(c.id)}">${escapeHtml(c.name)} — ${formatDateTime(c.updated_at)}</option>`).join("")
-        : `<option value="">Aucune campagne en base</option>`;
+    try {
+      const campaigns = await dbListCampaigns();
+      if (el.startupDbSelect) {
+        el.startupDbSelect.innerHTML = campaigns.length
+          ? campaigns.map((c) => `<option value="${escapeAttr(c.id)}">${escapeHtml(c.name)} — ${formatDateTime(c.updated_at)}</option>`).join("")
+          : `<option value="">Aucune campagne en base</option>`;
+        el.startupDbSelect.hidden = false;
+      }
+      if (el.startupLoadDbBtn) {
+        el.startupLoadDbBtn.hidden = false;
+        el.startupLoadDbBtn.disabled = !campaigns.length;
+      }
+    } catch (e) {
+      db = false;
     }
-    if (el.startupLoadDbBtn) el.startupLoadDbBtn.disabled = !campaigns.length;
   }
+
+  if (!db && el.startupDesc) {
+    el.startupDesc.textContent = "Commencez une nouvelle session ou chargez un fichier JSON local.";
+    if (el.startupLoadJsonBtn) el.startupLoadJsonBtn.hidden = false;
+  }
+
   el.startupModal.classList.add("show");
-  (db && el.startupLoadDbBtn ? el.startupLoadDbBtn : el.startupLoadJsonBtn).focus();
+  const focusBtn = (db && el.startupLoadDbBtn && !el.startupLoadDbBtn.hidden)
+    ? el.startupLoadDbBtn
+    : (el.startupLoadJsonBtn && !el.startupLoadJsonBtn.hidden ? el.startupLoadJsonBtn : el.startupSkipBtn);
+  if (focusBtn) focusBtn.focus();
 }
 
 async function loadDbCampaignFromStartup() {
