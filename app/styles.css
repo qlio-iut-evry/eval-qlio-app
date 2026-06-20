@@ -1020,9 +1020,9 @@ body.is-electron .view {
 }
 
 .preset-manage-btn {
-  background: rgba(255,255,255,.08);
-  border: 1px dashed rgba(255,255,255,.25);
-  color: rgba(255,255,255,.55);
+  background: rgba(29,111,216,.2);
+  border: 1px solid rgba(29,111,216,.5);
+  color: #7ab8ff;
   font-size: 10px;
   font-weight: 700;
   cursor: pointer;
@@ -1032,9 +1032,9 @@ body.is-electron .view {
 }
 
 .preset-manage-btn:hover {
+  background: rgba(29,111,216,.4);
+  border-color: #5a9fff;
   color: #fff;
-  background: rgba(255,255,255,.15);
-  border-color: rgba(255,255,255,.5);
 }
 
 .rubric-comment textarea {
