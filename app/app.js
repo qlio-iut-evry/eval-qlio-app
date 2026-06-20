@@ -848,7 +848,9 @@ function renderRubrics() {
       if (!student) return;
       const rubricId = button.closest(".rubric").dataset.rubric;
       const criterion = button.closest(".criterion").dataset.criterion;
-      student.evaluation.rubrics[rubricId].criteria[criterion] = Number(button.dataset.score);
+      const newScore = Number(button.dataset.score);
+      const current = student.evaluation.rubrics[rubricId].criteria[criterion];
+      student.evaluation.rubrics[rubricId].criteria[criterion] = current === newScore ? null : newScore;
       student.evaluation.validated = false;
       autosaveRenderStudent();
     });
