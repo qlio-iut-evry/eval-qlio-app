@@ -1046,6 +1046,7 @@ function renderSelectedStudent() {
   el.evaluatorInput.value = student.evaluator || "";
   el.commentInput.value = student.evaluation.comment || "";
   fillInputs(student);
+  renderRubrics();
   setRubricControls(student);
   renderEvaluatorQuickFill(student);
   renderCompletion(student);
